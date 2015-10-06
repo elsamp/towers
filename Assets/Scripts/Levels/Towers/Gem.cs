@@ -23,6 +23,7 @@ public class Gem : MonoBehaviour {
 	public float hitPhysicalMultiplier = 1;
 	public float splashRadiusModifier = 0;
 
+    public Ink ink;
 
 	// Use this for initialization
 	void Start () {
@@ -33,4 +34,5 @@ public class Gem : MonoBehaviour {
 	void Update () {
 	
 	}
+
 }

@@ -39,7 +39,7 @@ public class GemSelector : MonoBehaviour {
 			int noneButtonIndex = 0;
 
 			for (int index = 0 ; index < availibleGems.Length ; index++){
-				if (GUI.Button(new Rect(10, 10 + (30 * index), 150, 20), availibleGems[index].gemName)){
+				if (GUI.Button(new Rect(10, 50 + (30 * index), 150, 20), availibleGems[index].gemName)){
 					selectedSlot.SetGem(availibleGems[index]); 
 					isActive = false;
 				}
@@ -47,11 +47,16 @@ public class GemSelector : MonoBehaviour {
 				noneButtonIndex = index + 1;
 			}
 
-			if (GUI.Button(new Rect(10, 10 + (30 * noneButtonIndex), 150, 20), "None")){
+			if (GUI.Button(new Rect(10, 50 + (30 * noneButtonIndex), 150, 20), "None")){
 				selectedSlot.SetGem(null); 
 				isActive = false;
 			}
-		}
+
+            if (GUI.Button(new Rect(10, 10, 20, 20), "cold"))
+            {
+
+            }
+        }
 	}
 
 	public void SetSelectedSlot(GemSlot slot){

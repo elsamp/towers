@@ -18,8 +18,6 @@ public class ProjectileSplashArea : MonoBehaviour {
 	void OnTriggerEnter(Collider other) {
 		Enemy enemyTarget = other.GetComponent<Enemy>();
 
-		Debug.Log("Splash Hitting");
-
 		if(enemyTarget != null){
 			projectile.AddSplashTarget(enemyTarget);
 		}

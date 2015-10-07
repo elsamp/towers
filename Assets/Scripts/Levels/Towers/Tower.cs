@@ -82,8 +82,6 @@ public class Tower : MonoBehaviour {
 
 				if(lastFireTime + (reloadTime) < Time.time){
 
-					Debug.Log("Reloading");
-
 					currentClipCount = clipMaxSizeBase + clipMaxSizeModifier;
 					FireProjectile();
 				}
@@ -96,7 +94,6 @@ public class Tower : MonoBehaviour {
 
 	public void AddPotentailTarget(Enemy enemy){
 
-		//Debug.Log("Add Target");
 		targetableEnemies.Add(enemy);
 	}
 
@@ -152,8 +149,6 @@ public class Tower : MonoBehaviour {
 	}
 
 	private void FireProjectile(){
-
-		Debug.Log("FireProjectile!");
 
 		for(int targetIndex = 0 ; (targetIndex < targetableEnemies.Count) && (targetIndex < (numberOfTargetsBase + numberOfTargetsModifier)); targetIndex++ ){
 

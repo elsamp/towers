@@ -30,8 +30,6 @@ public class GemSlot : MonoBehaviour {
 
 	void OnMouseUp(){
 
-		Debug.Log("Clicked");
-
 		GemSelector.Instance.isActive = true;
 		GemSelector.Instance.SetSelectedSlot(this);
 	}

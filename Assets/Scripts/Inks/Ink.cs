@@ -7,11 +7,11 @@ public class Ink {
 
     public InkElement inkElement;
 
-    public float coldConversion;
-    public float fireConversion;
-    public float earthConversion;
+    public float coldConversion = 0;
+    public float fireConversion = 0;
+    public float earthConversion = 0;
 
-    public float elementalEffectChance;
+    public float elementalEffectChance = 0;
 
 
     public Ink(float coldConversion, float fireConversion, float earthConversion, float elementalChance, InkElement element)

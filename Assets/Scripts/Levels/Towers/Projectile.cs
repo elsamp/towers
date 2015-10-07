@@ -27,7 +27,11 @@ public class Projectile : MonoBehaviour {
 	private float hitEarthMultiplier = 1;
 	private float hitPhysicalMultiplier = 1;
 
-	private float splashRadiusModifier = 0;
+    private float coldConversionRate = 0;
+    private float fireConversionRate = 0;
+    private float earthConversionRate = 0;
+
+    private float splashRadiusModifier = 0;
 	private float splashDamageMitigator = 0.2f;
 
 	private Vector3 direction;
@@ -57,7 +61,7 @@ public class Projectile : MonoBehaviour {
 			//splashRadiusArea.radius += splashScale.x;
 			splashRadiusArea.gameObject.transform.localScale += splashScale;
 
-			Debug.Log("Radius: " + splashRadius + " Modifier: " + splashRadiusModifier);
+			//Debug.Log("Radius: " + splashRadius + " Modifier: " + splashRadiusModifier);
 
 			if(splashRadiusArea.gameObject.transform.localScale.x >= (splashRadius + splashRadiusModifier)){
 				ApplySplashDamage();
@@ -83,11 +87,17 @@ public class Projectile : MonoBehaviour {
 				hitPhysicalMultiplier *= gem.hitPhysicalMultiplier;
 				splashRadiusModifier += gem.splashRadiusModifier;
 
-				Debug.Log("Modifier: " + splashRadiusModifier);
+                fireConversionRate += gem.ink.fireConversion;
+                earthConversionRate += gem.ink.earthConversion;
+                coldConversionRate += gem.ink.coldConversion;
+
+				//Debug.Log("Modifier: " + splashRadiusModifier);
 			}
 		}
 
-	}
+        Debug.Log("Elemental conversion rates| Cold: " + coldConversionRate + " Fire: " + fireConversionRate + " Earth: " + earthConversionRate);
+
+    }
 
 	private bool HaveArrived(){
 
@@ -101,7 +111,7 @@ public class Projectile : MonoBehaviour {
 
 	private void LandHit(){
 
-		Debug.Log("Target Hit!");
+		//Debug.Log("Target Hit!");
 		ApplyTargetDamage();
 
 		targetHit = true;
@@ -109,7 +119,7 @@ public class Projectile : MonoBehaviour {
 
 	public void SetTarget(Enemy enemy){
 
-		Debug.Log("Set Target");
+		//Debug.Log("Set Target");
 		targetEnemy = enemy;
 	}
 
@@ -121,35 +131,66 @@ public class Projectile : MonoBehaviour {
 	}
 
 	private float ColdDamage(){
-		return hitBaseColdDamage * hitColdMultiplier * hitGlobalMultiplier;
+
+        return (hitBaseColdDamage + ElementConvertedAmount(coldConversionRate)) * hitColdMultiplier;
 	}
 
 	private float FireDamage(){
-		return hitBaseFireDamage * hitFireMultiplier * hitGlobalMultiplier;
+
+		return (hitBaseFireDamage + ElementConvertedAmount(fireConversionRate)) * hitFireMultiplier;
 	}
 
 	private float EarthDamage(){
-		return hitBaseEarthDamage * hitEarthMultiplier * hitGlobalMultiplier;
+
+		return (hitBaseEarthDamage + ElementConvertedAmount(earthConversionRate)) * hitEarthMultiplier;
 	}
+
+    private float ElementConvertedAmount(float elementalConvertionRate)
+    {
+        float convertedElementAmount = 0;
+
+        if (elementalConvertionRate > 0)
+        {
+            convertedElementAmount = PhysicalDamage() * elementalConvertionRate;
+        }
+
+        //Debug.Log("Coverted elemental amount: " + convertedElementAmount);
+
+        return convertedElementAmount;
+    }
+
+    private float ConvertedPhysicalDamage()
+    {
+        return PhysicalDamage() - (ElementConvertedAmount(coldConversionRate) + ElementConvertedAmount(fireConversionRate) + ElementConvertedAmount(earthConversionRate));
+    }
 
 	private float PhysicalDamage(){
-		return hitBasePhysicalDamage * hitPhysicalMultiplier * hitGlobalMultiplier;
-	}
+
+        return hitBasePhysicalDamage * hitPhysicalMultiplier * hitGlobalMultiplier;
+    }
 
 	private void ApplyTargetDamage(){
-		targetEnemy.TakeDamage(PhysicalDamage(), ColdDamage(), FireDamage(),EarthDamage());
+		targetEnemy.TakeDamage(ConvertedPhysicalDamage(), ColdDamage(), FireDamage(),EarthDamage());
+
+        Debug.Log("Enemy TARGET hit with damage| Physical: " + ConvertedPhysicalDamage() + 
+            " Cold: " + ColdDamage() + " Fire: " + FireDamage() + " Earth: " + EarthDamage());
 	}
 
 	private void ApplySplashDamage(){
 
-		foreach(Enemy enemy in splashTargetEnemies){
+        float physicalSlpash = ConvertedPhysicalDamage() * splashDamageMitigator * hitSplashMultiplier;
+        float coldSplash = ColdDamage() * splashDamageMitigator * hitSplashMultiplier;
+        float fireSplash = FireDamage() * splashDamageMitigator * hitSplashMultiplier;
+        float earthSplash = EarthDamage() * splashDamageMitigator * hitSplashMultiplier;
+
+        foreach (Enemy enemy in splashTargetEnemies){
 			if(enemy != null){
 
-				enemy.TakeDamage(PhysicalDamage() * splashDamageMitigator * hitSplashMultiplier,
-				                 ColdDamage() * splashDamageMitigator * hitSplashMultiplier,
-				                 FireDamage() * splashDamageMitigator * hitSplashMultiplier,
-				                 EarthDamage() * splashDamageMitigator * hitSplashMultiplier);
-			}
+				enemy.TakeDamage(physicalSlpash,coldSplash,fireSplash,earthSplash);
+
+                Debug.Log("Enemy SPLASH hit with damage| Physical: " + physicalSlpash +
+            " Cold: " + coldSplash + " Fire: " + fireSplash + " Earth: " + earthSplash);
+            }
 		}
 	}
 }

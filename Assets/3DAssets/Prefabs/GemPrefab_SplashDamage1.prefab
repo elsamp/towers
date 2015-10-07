@@ -78,11 +78,11 @@ MonoBehaviour:
   gemCost: 5
   clipSizeModifier: 0
   clipDelayTimeModifier: 0
-  reloadRateModifier: 0
+  reloadRateModifier: -.0500000007
   numberOfTargetsModifier: 0
   targetRadiusMultiplier: 1
   hitSplashMultiplier: 2
-  hitGlobalMultiplier: .899999976
+  hitGlobalMultiplier: .949999988
   hitFireMultiplier: 1
   hitColdMultiplier: 1
   hitEarthMultiplier: 1
@@ -106,7 +106,19 @@ Prefab:
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
-    m_Modifications: []
+    m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: hitSplashMultiplier
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: hitGlobalMultiplier
+      value: .949999988
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: reloadRateModifier
+      value: -.0500000007
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 100000}

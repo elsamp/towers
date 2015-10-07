@@ -80,7 +80,7 @@ MonoBehaviour:
   clipDelayTimeModifier: 0
   reloadRateModifier: 0
   numberOfTargetsModifier: 0
-  targetRadiusMultiplier: 1.20000005
+  targetRadiusMultiplier: 1.39999998
   hitSplashMultiplier: 1
   hitGlobalMultiplier: 1
   hitFireMultiplier: 1
@@ -106,7 +106,11 @@ Prefab:
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
-    m_Modifications: []
+    m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: targetRadiusMultiplier
+      value: 1.39999998
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 100000}

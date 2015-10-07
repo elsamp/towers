@@ -73,16 +73,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a766ade31e6f0c469b3bb34c3e410e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gemName: Faster Relead
+  gemName: Faster Reload
   gemColour: {r: 1, g: .77352941, b: .433823526, a: 1}
   gemCost: 5
   clipSizeModifier: 0
   clipDelayTimeModifier: 0
-  reloadRateModifier: -.174999997
+  reloadRateModifier: -.200000003
   numberOfTargetsModifier: 0
   targetRadiusMultiplier: 1
   hitSplashMultiplier: 1
-  hitGlobalMultiplier: 1
+  hitGlobalMultiplier: .925000012
   hitFireMultiplier: 1
   hitColdMultiplier: 1
   hitEarthMultiplier: 1
@@ -106,7 +106,19 @@ Prefab:
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
-    m_Modifications: []
+    m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: hitGlobalMultiplier
+      value: .925000012
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: reloadRateModifier
+      value: -.200000003
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: gemName
+      value: Faster Reload
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 100000}

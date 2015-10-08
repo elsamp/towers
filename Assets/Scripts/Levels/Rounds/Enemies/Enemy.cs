@@ -131,7 +131,7 @@ public class Enemy : MonoBehaviour {
     {
         if (fireDamage > 0)
         {
-            burnDamage = fireDamage * 0.25f;
+            burnDamage = fireDamage * 0.5f;
         }
     }
 
@@ -170,6 +170,9 @@ public class Enemy : MonoBehaviour {
     private void TakeBurnDamage(float damage)
     {
         currentLife -= damage;
+
+        Debug.Log("Taking Burn Damage: " + damage);
+
         CheckForDeath();
 
         nextBurnHitTime = Time.time + 0.5f;
@@ -188,6 +191,7 @@ public class Enemy : MonoBehaviour {
 
             } else
             {
+                TakeBurnDamage(burnDamage);
                 RemoveStatusEffect(fireStatusEffect);
                 burnDamage = 0;
             } 

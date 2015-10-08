@@ -11,7 +11,7 @@ public class Ink {
     public float fireConversion = 0;
     public float earthConversion = 0;
 
-    public float elementalEffectChance = 0;
+    public float elementalEffectChance = 0;                 // number from 0-1
 
 
     public Ink(float coldConversion, float fireConversion, float earthConversion, float elementalChance, InkElement element)

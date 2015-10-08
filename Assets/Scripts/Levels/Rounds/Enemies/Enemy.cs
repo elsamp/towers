@@ -24,9 +24,22 @@ public class Enemy : MonoBehaviour {
 	private Vector3 destination;
 	private Vector3 direction;
 
+    private float fireStatusEndTime = 0;
+    private float coldStatusEndTime = 0;
+    private float earthStatusEndTime = 0;
 
-	// Use this for initialization
-	void Start () {
+    private float nextBurnHitTime = 0;
+    private float burnDamage = 0;
+    private float slowMultiplier = 1;
+    private float poisonMultiplier = 1;
+
+    private GameObject fireStatusEffect;
+    private GameObject coldStatusEffect;
+    private GameObject earthStatusEffect;
+
+
+    // Use this for initialization
+    void Start () {
 		lifeBar.Init(maxLife);
 		pathNodeIndex = 0;
 		UpdateDestination();
@@ -41,11 +54,30 @@ public class Enemy : MonoBehaviour {
 			UpdateDestination();
 		}
 		direction = destination - transform.position;
-		//body.transform.LookAt(destinationNode.transform.position);
-		
-		transform.Translate(direction.normalized * (speed * 0.1f) * Time.deltaTime, Space.World);
+        //body.transform.LookAt(destinationNode.transform.position);
+
+        transform.Translate(direction.normalized * EffectedSpeed() * Time.deltaTime, Space.World);
+        
+        UpdateForStatusEffect();
 
 	}
+
+    private float EffectedSpeed()
+    {
+        float effectedSpeed;
+
+        if (ColdEffectIsActive())
+        {
+
+            effectedSpeed = ((speed * slowMultiplier) * 0.1f);
+        }
+        else
+        {
+            effectedSpeed = (speed * 0.1f);
+        }
+
+        return effectedSpeed;
+    }
 
 	public bool HaveArrived(){
 
@@ -73,26 +105,218 @@ public class Enemy : MonoBehaviour {
 
 	}
 
-	public void TakeDamage(float physicalDamage, float iceDamage, float fireDamage, float earthDamage){
+	public void TakeDamage(float physicalDamage, float coldDamage, float fireDamage, float earthDamage){
 
 		float totalDamage = 0;
 
 		totalDamage += Mathf.Max(physicalDamage - physicalResist, 0);
-		totalDamage += Mathf.Max(iceDamage - coldResist, 0);
+		totalDamage += Mathf.Max(coldDamage - coldResist, 0);
 		totalDamage += Mathf.Max(fireDamage - fireResist, 0);
 		totalDamage += Mathf.Max(earthDamage - earthResist, 0);
 
-		Debug.Log ("Taking Damage:" + totalDamage);
+        totalDamage /= poisonMultiplier;
 
 		currentLife -= totalDamage;
 
-		if(currentLife <= 0){
-			Die();
-		} else {
-			lifeBar.UpdateLifeBar(currentLife);
-		}
+        Debug.Log("Enemy TARGET hit with damage: " + totalDamage);
 
-	}
+        CheckForDeath();
+
+        CalculateBurnDamage(fireDamage);
+        CalculateSlowMultiplier(coldDamage);
+        CalculatePoisionMultiplier(earthDamage);
+    }
+
+    private void CalculateBurnDamage(float fireDamage)
+    {
+        if (fireDamage > 0)
+        {
+            burnDamage = fireDamage * 0.25f;
+        }
+    }
+
+    private void CalculateSlowMultiplier(float coldDamage)
+    {
+        if (coldDamage > 0)
+        {
+            if (coldDamage > 10)
+            {
+                coldDamage = 10;
+            }
+
+            float normalizedDamage = coldDamage / 10;
+            slowMultiplier = 1 - normalizedDamage;
+
+            Debug.Log("Slow Mulitiplier: " + slowMultiplier + "normalized damage: " + normalizedDamage);
+        }
+    }
+
+    private void CalculatePoisionMultiplier(float earthDamage)
+    {
+        if (earthDamage > 0)
+        {
+            if (earthDamage > 10)
+            {
+                earthDamage = 10;
+            }
+
+            float normalizedDamage = earthDamage / 10;
+            poisonMultiplier = 1 - normalizedDamage;
+
+            Debug.Log("Poison Mulitiplier: " + poisonMultiplier + "normalized damage: " + normalizedDamage);
+        }
+    }
+
+    private void TakeBurnDamage(float damage)
+    {
+        currentLife -= damage;
+        CheckForDeath();
+
+        nextBurnHitTime = Time.time + 0.5f;
+    }
+
+    private void UpdateForStatusEffect()
+    {
+        if(fireStatusEffect != null)
+        {
+            if (FireEffectIsActive())
+            {
+                if (nextBurnHitTime < Time.time)
+                {
+                    TakeBurnDamage(burnDamage);
+                }
+
+            } else
+            {
+                RemoveStatusEffect(fireStatusEffect);
+                burnDamage = 0;
+            } 
+        }
+
+        if (coldStatusEffect != null && !ColdEffectIsActive())
+        {
+            RemoveStatusEffect(coldStatusEffect);
+            slowMultiplier = 1;
+        }
+
+        if (earthStatusEffect != null && !EarthEffectIsActive())
+        {
+            RemoveStatusEffect(earthStatusEffect);
+            poisonMultiplier = 1;
+        }
+    }
+
+    private bool ColdEffectIsActive()
+    {
+        if(Time.time < coldStatusEndTime)
+        {
+            return true;
+        }
+
+        return false;
+    }
+
+    private bool FireEffectIsActive()
+    {
+        if (Time.time < fireStatusEndTime)
+        {
+            return true;
+        }
+
+        return false;
+    }
+
+    private bool EarthEffectIsActive()
+    {
+        if (Time.time < earthStatusEndTime)
+        {
+            return true;
+        }
+
+        return false;
+    }
+
+    private void AddColdStatus(float duration)
+    {
+        coldStatusEndTime = Time.time + duration;
+        if (coldStatusEffect == null)
+        {
+            coldStatusEffect = Instantiate(LevelController.Instance.coldStatusEffectPrefab, this.transform.position, Quaternion.identity) as GameObject;
+            coldStatusEffect.transform.parent = this.gameObject.transform;
+        }
+    }
+
+    private void AddFireStatus(float duration)
+    {
+        fireStatusEndTime = Time.time + duration;
+        if (fireStatusEffect == null && this.gameObject != null)
+        {
+            fireStatusEffect = Instantiate(LevelController.Instance.fireStatusEffectPrefab, this.gameObject.transform.position, this.gameObject.transform.rotation) as GameObject;
+            fireStatusEffect.transform.parent = this.gameObject.transform;
+
+            TakeBurnDamage(burnDamage);
+        }
+    }
+
+    private void AddEarthStatus(float duration)
+    {
+        earthStatusEndTime = Time.time + duration;
+
+        if(earthStatusEffect == null)
+        {
+            earthStatusEffect = Instantiate(LevelController.Instance.earthStatusEffectPrefab, this.transform.position, Quaternion.identity) as GameObject;
+            earthStatusEffect.transform.parent = this.gameObject.transform;
+
+        }
+        
+    }
+
+    private void RemoveStatusEffect(GameObject statusEffect)
+    {
+        Destroy(statusEffect);
+    }
+
+    public void TakeStatusEffect(float coldChance, float fireChance, float earthChance, float effectDurration)
+    {
+        if(RollDiceForStatusEffect(coldChance))
+        {
+            AddColdStatus(effectDurration);
+        }
+
+        if (RollDiceForStatusEffect(fireChance))
+        {
+            AddFireStatus(effectDurration);
+        }
+
+        if (RollDiceForStatusEffect(earthChance))
+        {
+            AddEarthStatus(effectDurration);
+        }
+    }
+
+    public bool RollDiceForStatusEffect(float chance)
+    {
+        float roll = Random.Range(0.0f, 1.0f);
+
+        if(roll < chance)
+        {
+            return true;
+        }
+
+        return false;
+    }
+
+    private void CheckForDeath()
+    {
+        if (currentLife <= 0)
+        {
+            Die();
+        }
+        else
+        {
+            lifeBar.UpdateLifeBar(currentLife);
+        }
+    }
 
 	private void Die(){
 		LevelController.Instance.EnemyKilled(this);

@@ -5,7 +5,11 @@ public class LevelController : MonoBehaviour {
 
 	public Town town;
 
-	private static LevelController instance;
+    public GameObject earthStatusEffectPrefab;
+    public GameObject coldStatusEffectPrefab;
+    public GameObject fireStatusEffectPrefab;
+
+    private static LevelController instance;
 	
 	public static LevelController Instance
 	{

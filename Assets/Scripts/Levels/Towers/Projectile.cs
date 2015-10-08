@@ -14,8 +14,8 @@ public class Projectile : MonoBehaviour {
 	public float hitBaseColdDamage;
 	public float hitBaseEarthDamage;
 	public float hitBasePhysicalDamage;
-
-	public float speed;
+    public float statusEffectDuration;
+    public float speed;
 
 	private Enemy targetEnemy;
 	public List<Enemy> splashTargetEnemies;
@@ -30,6 +30,10 @@ public class Projectile : MonoBehaviour {
     private float coldConversionRate = 0;
     private float fireConversionRate = 0;
     private float earthConversionRate = 0;
+
+    private float coldStatusChance = 0;
+    private float fireStatusChance = 0;
+    private float earthStatusChance = 0;
 
     private float splashRadiusModifier = 0;
 	private float splashDamageMitigator = 0.2f;
@@ -90,8 +94,23 @@ public class Projectile : MonoBehaviour {
                 fireConversionRate += gem.ink.fireConversion;
                 earthConversionRate += gem.ink.earthConversion;
                 coldConversionRate += gem.ink.coldConversion;
+                statusEffectDuration += gem.statuseffectDuration;
 
-				//Debug.Log("Modifier: " + splashRadiusModifier);
+                switch (gem.ink.inkElement)
+                {
+                    case Ink.InkElement.Cold:
+                        coldStatusChance = (gem.ink.elementalEffectChance + gem.statusEffectChance);
+                        break;
+                    case Ink.InkElement.Fire:
+                        fireStatusChance = (gem.ink.elementalEffectChance + gem.statusEffectChance);
+                        break;
+                    case Ink.InkElement.Earth:
+                        earthStatusChance = (gem.ink.elementalEffectChance + gem.statusEffectChance);
+                        break;
+                    default:
+                        break;
+                }
+
 			}
 		}
 
@@ -113,6 +132,7 @@ public class Projectile : MonoBehaviour {
 
 		//Debug.Log("Target Hit!");
 		ApplyTargetDamage();
+        ApplyElementalEffect();
 
 		targetHit = true;
 	}
@@ -176,7 +196,12 @@ public class Projectile : MonoBehaviour {
             " Cold: " + ColdDamage() + " Fire: " + FireDamage() + " Earth: " + EarthDamage());
 	}
 
-	private void ApplySplashDamage(){
+    private void ApplyElementalEffect()
+    {
+        targetEnemy.TakeStatusEffect(coldStatusChance, fireStatusChance, earthStatusChance, statusEffectDuration);
+    }
+
+    private void ApplySplashDamage(){
 
         float physicalSlpash = ConvertedPhysicalDamage() * splashDamageMitigator * hitSplashMultiplier;
         float coldSplash = ColdDamage() * splashDamageMitigator * hitSplashMultiplier;
@@ -188,8 +213,8 @@ public class Projectile : MonoBehaviour {
 
 				enemy.TakeDamage(physicalSlpash,coldSplash,fireSplash,earthSplash);
 
-                Debug.Log("Enemy SPLASH hit with damage| Physical: " + physicalSlpash +
-            " Cold: " + coldSplash + " Fire: " + fireSplash + " Earth: " + earthSplash);
+                /*Debug.Log("Enemy SPLASH hit with damage| Physical: " + physicalSlpash +
+            " Cold: " + coldSplash + " Fire: " + fireSplash + " Earth: " + earthSplash);*/
             }
 		}
 	}

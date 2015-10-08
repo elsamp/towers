@@ -23,6 +23,9 @@ public class Gem : MonoBehaviour {
 	public float hitPhysicalMultiplier = 1;
 	public float splashRadiusModifier = 0;
 
+    public float statusEffectChance = 0;
+    public float statuseffectDuration = 0;
+
     public Ink ink;
 
 	// Use this for initialization

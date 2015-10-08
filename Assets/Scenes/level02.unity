@@ -2583,9 +2583,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   town: {fileID: 1914286214}
-  earthStatusEffectPrefab: {fileID: 0}
-  coldStatusEffectPrefab: {fileID: 0}
-  fireStatusEffectPrefab: {fileID: 0}
+  earthStatusEffectPrefab: {fileID: 151306, guid: 6adbc23c10c076e4cb712844c26e1622,
+    type: 2}
+  coldStatusEffectPrefab: {fileID: 129684, guid: 04cc3ef27d5be0d46bf3f8ea25d864ed,
+    type: 2}
+  fireStatusEffectPrefab: {fileID: 116264, guid: 2802eefad381d7e44b018d6ceb99d39d,
+    type: 2}
 --- !u!1 &1984209626
 GameObject:
   m_ObjectHideFlags: 0

@@ -85,9 +85,11 @@ MonoBehaviour:
   hitGlobalMultiplier: 1
   hitFireMultiplier: 1
   hitColdMultiplier: 1
-  hitEarthMultiplier: 1.20000005
+  hitEarthMultiplier: 1.25
   hitPhysicalMultiplier: 1
   splashRadiusModifier: 0
+  statusEffectChance: 0
+  statuseffectDuration: 0
 --- !u!135 &13500000
 SphereCollider:
   m_ObjectHideFlags: 1
@@ -106,7 +108,11 @@ Prefab:
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
-    m_Modifications: []
+    m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: hitEarthMultiplier
+      value: 1.25
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 100000}

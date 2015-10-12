@@ -2681,6 +2681,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 21ed111c2d32fcd4c8f2f82cecbc198d, type: 2}
   - {fileID: 11400000, guid: ad9d0ead7203d3f479b3f6092c380c90, type: 2}
   - {fileID: 11400000, guid: b778b38f4d624ea4dba6e6826e5d9bf5, type: 2}
+  - {fileID: 11400000, guid: dccc023a54c8af645afdc83e8d4d0331, type: 2}
+  - {fileID: 11400000, guid: e5e752174f33d824e96fc9519cbff82c, type: 2}
   isActive: 0
 --- !u!1001 &2059838739
 Prefab:

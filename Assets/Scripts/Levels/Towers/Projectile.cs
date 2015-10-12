@@ -34,6 +34,7 @@ public class Projectile : MonoBehaviour {
     private float coldStatusChance = 0;
     private float fireStatusChance = 0;
     private float earthStatusChance = 0;
+    private float globalStatusChance = 0;
 
     private float splashRadiusModifier = 0;
 	private float splashDamageMitigator = 0.2f;
@@ -99,13 +100,16 @@ public class Projectile : MonoBehaviour {
                 switch (gem.ink.inkElement)
                 {
                     case Ink.InkElement.Cold:
-                        coldStatusChance += (gem.ink.elementalEffectChance + gem.statusEffectChance);
+                        coldStatusChance += gem.ink.elementalEffectChance;
+                        globalStatusChance += gem.statusEffectChance;
                         break;
                     case Ink.InkElement.Fire:
-                        fireStatusChance += (gem.ink.elementalEffectChance + gem.statusEffectChance);
+                        fireStatusChance += gem.ink.elementalEffectChance;
+                        globalStatusChance += gem.statusEffectChance;
                         break;
                     case Ink.InkElement.Earth:
-                        earthStatusChance += (gem.ink.elementalEffectChance + gem.statusEffectChance);
+                        earthStatusChance += gem.ink.elementalEffectChance;
+                        globalStatusChance += gem.statusEffectChance;
                         break;
                     default:
                         break;
@@ -113,6 +117,10 @@ public class Projectile : MonoBehaviour {
 
 			}
 		}
+
+        coldStatusChance += (coldStatusChance * globalStatusChance);
+        fireStatusChance += (fireStatusChance * globalStatusChance);
+        earthStatusChance += (earthStatusChance * globalStatusChance);
 
         Debug.Log("Elemental conversion rates| Cold: " + coldConversionRate + " Fire: " + fireConversionRate + " Earth: " + earthConversionRate);
 

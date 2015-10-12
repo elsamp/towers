@@ -83,12 +83,12 @@ public class Projectile : MonoBehaviour {
 		foreach(Gem gem in gems){
 
 			if(gem != null){
-				hitSplashMultiplier *= gem.hitSplashMultiplier;
-				hitGlobalMultiplier *= gem.hitGlobalMultiplier;
-				hitFireMultiplier *= gem.hitFireMultiplier;
-				hitColdMultiplier *= gem.hitColdMultiplier;
-				hitEarthMultiplier *= gem.hitEarthMultiplier;
-				hitPhysicalMultiplier *= gem.hitPhysicalMultiplier;
+				hitSplashMultiplier += gem.hitSplashMultiplier;
+				hitGlobalMultiplier += gem.hitGlobalMultiplier;
+				hitFireMultiplier += gem.hitFireMultiplier;
+				hitColdMultiplier += gem.hitColdMultiplier;
+				hitEarthMultiplier += gem.hitEarthMultiplier;
+				hitPhysicalMultiplier += gem.hitPhysicalMultiplier;
 				splashRadiusModifier += gem.splashRadiusModifier;
 
                 fireConversionRate += gem.ink.fireConversion;
@@ -99,13 +99,13 @@ public class Projectile : MonoBehaviour {
                 switch (gem.ink.inkElement)
                 {
                     case Ink.InkElement.Cold:
-                        coldStatusChance = (gem.ink.elementalEffectChance + gem.statusEffectChance);
+                        coldStatusChance += (gem.ink.elementalEffectChance + gem.statusEffectChance);
                         break;
                     case Ink.InkElement.Fire:
-                        fireStatusChance = (gem.ink.elementalEffectChance + gem.statusEffectChance);
+                        fireStatusChance += (gem.ink.elementalEffectChance + gem.statusEffectChance);
                         break;
                     case Ink.InkElement.Earth:
-                        earthStatusChance = (gem.ink.elementalEffectChance + gem.statusEffectChance);
+                        earthStatusChance += (gem.ink.elementalEffectChance + gem.statusEffectChance);
                         break;
                     default:
                         break;

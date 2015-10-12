@@ -127,7 +127,7 @@ public class Tower : MonoBehaviour {
 				clipDelayTimeModifier += gemSlot.gem.clipDelayTimeModifier;
 				reloadTimeModifier += gemSlot.gem.reloadRateModifier;
 				numberOfTargetsModifier += gemSlot.gem.numberOfTargetsModifier;
-				targetRadiusMultiplier += gemSlot.gem.targetRadiusMultiplier;
+				targetRadiusMultiplier *= gemSlot.gem.targetRadiusMultiplier;
 			}
 		}
 

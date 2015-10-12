@@ -84,12 +84,12 @@ public class Projectile : MonoBehaviour {
 		foreach(Gem gem in gems){
 
 			if(gem != null){
-				hitSplashMultiplier += gem.hitSplashMultiplier;
-				hitGlobalMultiplier += gem.hitGlobalMultiplier;
-				hitFireMultiplier += gem.hitFireMultiplier;
-				hitColdMultiplier += gem.hitColdMultiplier;
-				hitEarthMultiplier += gem.hitEarthMultiplier;
-				hitPhysicalMultiplier += gem.hitPhysicalMultiplier;
+				hitSplashMultiplier *= gem.hitSplashMultiplier;
+				hitGlobalMultiplier *= gem.hitGlobalMultiplier;
+				hitFireMultiplier *= gem.hitFireMultiplier;
+				hitColdMultiplier *= gem.hitColdMultiplier;
+				hitEarthMultiplier *= gem.hitEarthMultiplier;
+				hitPhysicalMultiplier *= gem.hitPhysicalMultiplier;
 				splashRadiusModifier += gem.splashRadiusModifier;
 
                 fireConversionRate += gem.ink.fireConversion;
@@ -122,7 +122,7 @@ public class Projectile : MonoBehaviour {
         fireStatusChance += (fireStatusChance * globalStatusChance);
         earthStatusChance += (earthStatusChance * globalStatusChance);
 
-        Debug.Log("Elemental conversion rates| Cold: " + coldConversionRate + " Fire: " + fireConversionRate + " Earth: " + earthConversionRate);
+        //Debug.Log("Elemental conversion rates| Cold: " + coldConversionRate + " Fire: " + fireConversionRate + " Earth: " + earthConversionRate);
 
     }
 

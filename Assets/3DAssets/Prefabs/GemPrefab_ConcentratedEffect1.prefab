@@ -78,16 +78,18 @@ MonoBehaviour:
   gemCost: 5
   clipSizeModifier: 0
   clipDelayTimeModifier: 0
-  reloadRateModifier: .25
+  reloadRateModifier: .200000003
   numberOfTargetsModifier: 0
-  targetRadiusMultiplier: 1
+  targetRadiusMultiplier: .949999988
   hitSplashMultiplier: 1
-  hitGlobalMultiplier: 1.45000005
+  hitGlobalMultiplier: 1
   hitFireMultiplier: 1
   hitColdMultiplier: 1
   hitEarthMultiplier: 1
-  hitPhysicalMultiplier: 1
+  hitPhysicalMultiplier: 1.39999998
   splashRadiusModifier: -.25
+  statusEffectChance: 0
+  statuseffectDuration: 0
 --- !u!135 &13500000
 SphereCollider:
   m_ObjectHideFlags: 1
@@ -109,11 +111,19 @@ Prefab:
     m_Modifications:
     - target: {fileID: 0}
       propertyPath: hitGlobalMultiplier
-      value: 1.45000005
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: reloadRateModifier
-      value: .25
+      value: .200000003
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: hitPhysicalMultiplier
+      value: 1.39999998
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: targetRadiusMultiplier
+      value: .949999988
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}

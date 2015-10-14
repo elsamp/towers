@@ -86,7 +86,7 @@ MonoBehaviour:
   hitFireMultiplier: 1
   hitColdMultiplier: 1
   hitEarthMultiplier: 1
-  hitPhysicalMultiplier: 1
+  hitPhysicalMultiplier: 1.04999995
   splashRadiusModifier: 0
   statusEffectChance: .300000012
   statuseffectDuration: 0
@@ -132,6 +132,10 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: gemName
       value: Elemental Chance
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: hitPhysicalMultiplier
+      value: 1.04999995
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}

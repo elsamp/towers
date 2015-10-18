@@ -80,7 +80,7 @@ MonoBehaviour:
   clipDelayTimeModifier: 0
   reloadRateModifier: 0
   numberOfTargetsModifier: 0
-  targetRadiusMultiplier: 1.39999998
+  targetRadiusMultiplier: 1.5
   hitSplashMultiplier: 1
   hitGlobalMultiplier: 1
   hitFireMultiplier: 1
@@ -88,6 +88,8 @@ MonoBehaviour:
   hitEarthMultiplier: 1
   hitPhysicalMultiplier: 1
   splashRadiusModifier: 0
+  statusEffectChance: 0
+  statuseffectDuration: 0
 --- !u!135 &13500000
 SphereCollider:
   m_ObjectHideFlags: 1
@@ -109,7 +111,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 0}
       propertyPath: targetRadiusMultiplier
-      value: 1.39999998
+      value: 1.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}

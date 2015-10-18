@@ -81,13 +81,15 @@ MonoBehaviour:
   reloadRateModifier: -.0500000007
   numberOfTargetsModifier: 0
   targetRadiusMultiplier: 1
-  hitSplashMultiplier: 2
-  hitGlobalMultiplier: .949999988
+  hitSplashMultiplier: 2.5
+  hitGlobalMultiplier: 1
   hitFireMultiplier: 1
   hitColdMultiplier: 1
   hitEarthMultiplier: 1
-  hitPhysicalMultiplier: 1
+  hitPhysicalMultiplier: .949999988
   splashRadiusModifier: 0
+  statusEffectChance: 0
+  statuseffectDuration: 0
 --- !u!135 &13500000
 SphereCollider:
   m_ObjectHideFlags: 1
@@ -109,15 +111,19 @@ Prefab:
     m_Modifications:
     - target: {fileID: 0}
       propertyPath: hitSplashMultiplier
-      value: 2
+      value: 2.5
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: hitGlobalMultiplier
-      value: .949999988
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: reloadRateModifier
       value: -.0500000007
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: hitPhysicalMultiplier
+      value: .949999988
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}

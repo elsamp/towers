@@ -82,12 +82,14 @@ MonoBehaviour:
   numberOfTargetsModifier: 0
   targetRadiusMultiplier: .75
   hitSplashMultiplier: 1
-  hitGlobalMultiplier: 1.45000005
+  hitGlobalMultiplier: 1
   hitFireMultiplier: 1
   hitColdMultiplier: 1
   hitEarthMultiplier: 1
-  hitPhysicalMultiplier: 1
+  hitPhysicalMultiplier: 1.45000005
   splashRadiusModifier: 0
+  statusEffectChance: 0
+  statuseffectDuration: 0
 --- !u!135 &13500000
 SphereCollider:
   m_ObjectHideFlags: 1
@@ -113,6 +115,10 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: hitGlobalMultiplier
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: hitPhysicalMultiplier
       value: 1.45000005
       objectReference: {fileID: 0}
     m_RemovedComponents: []

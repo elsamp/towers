@@ -105,14 +105,28 @@ public class Enemy : MonoBehaviour {
 
 	}
 
-	public void TakeDamage(float physicalDamage, float coldDamage, float fireDamage, float earthDamage){
+    public void TakeDamage(float physicalDamage, float coldDamage, float fireDamage, float earthDamage) {
 
-		float totalDamage = 0;
+        float totalDamage = 0;
 
-		totalDamage += Mathf.Max(physicalDamage - physicalResist, 0);
-		totalDamage += Mathf.Max(coldDamage - coldResist, 0);
-		totalDamage += Mathf.Max(fireDamage - fireResist, 0);
-		totalDamage += Mathf.Max(earthDamage - earthResist, 0);
+        if (physicalDamage > 0)
+        { 
+            totalDamage += Mathf.Max(physicalDamage - (physicalDamage * physicalResist), 0);
+        }
+
+        if (coldDamage > 0)
+        {
+            totalDamage += Mathf.Max(coldDamage - (coldDamage * coldResist), 0);
+        }
+
+        if (fireDamage > 0)
+        {
+            totalDamage += Mathf.Max(fireDamage - (fireDamage * fireResist), 0);
+        }
+        if (earthDamage > 0)
+        {
+            totalDamage += Mathf.Max(earthDamage - (earthDamage * earthResist), 0);
+        }
 
         totalDamage /= poisonMultiplier;
 

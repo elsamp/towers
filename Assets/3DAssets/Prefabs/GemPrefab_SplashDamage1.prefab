@@ -73,9 +73,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a766ade31e6f0c469b3bb34c3e410e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gemName: Splash Damage
-  gemColour: {r: .381198585, g: .691176474, b: .355752617, a: 1}
-  gemCost: 5
+  itemName: Splash Damage
+  itemColour: {r: .56055361, g: .878176808, b: .941176474, a: 1}
+  itemCost: 0
   clipSizeModifier: 0
   clipDelayTimeModifier: 0
   reloadRateModifier: -.0500000007
@@ -124,6 +124,26 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: hitPhysicalMultiplier
       value: .949999988
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: itemName
+      value: Splash Damage
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: itemColour.r
+      value: .56055361
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: itemColour.g
+      value: .878176808
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: itemColour.b
+      value: .941176474
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: itemColour.a
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}

@@ -73,9 +73,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a766ade31e6f0c469b3bb34c3e410e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gemName: Fire Damage
-  gemColour: {r: 1, g: .448275834, b: .0588235259, a: 1}
-  gemCost: 5
+  itemName: Up Fire Damage
+  itemColour: {r: .875, g: .604779422, b: .199448511, a: 1}
+  itemCost: 0
   clipSizeModifier: 0
   clipDelayTimeModifier: 0
   reloadRateModifier: 0
@@ -112,6 +112,26 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: hitFireMultiplier
       value: 1.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: itemName
+      value: Up Fire Damage
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: itemColour.r
+      value: .875
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: itemColour.g
+      value: .604779422
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: itemColour.b
+      value: .199448511
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: itemColour.a
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}

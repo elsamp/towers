@@ -91,7 +91,7 @@ public class Projectile : MonoBehaviour {
 				hitEarthMultiplier *= gem.hitEarthMultiplier;
 				hitPhysicalMultiplier *= gem.hitPhysicalMultiplier;
 				splashRadiusModifier += gem.splashRadiusModifier;
-
+                /*
                 fireConversionRate += gem.ink.fireConversion;
                 earthConversionRate += gem.ink.earthConversion;
                 coldConversionRate += gem.ink.coldConversion;
@@ -114,7 +114,7 @@ public class Projectile : MonoBehaviour {
                     default:
                         break;
                 }
-
+                */
 			}
 		}
 

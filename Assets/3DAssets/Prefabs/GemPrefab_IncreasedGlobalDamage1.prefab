@@ -73,9 +73,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a766ade31e6f0c469b3bb34c3e410e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gemName: Global Damage
-  gemColour: {r: .816176474, g: .450097322, b: .450097322, a: 1}
-  gemCost: 5
+  itemName: Up Global Damage
+  itemColour: {r: .507352948, g: .507352948, b: .507352948, a: 1}
+  itemCost: 0
   clipSizeModifier: 0
   clipDelayTimeModifier: 0
   reloadRateModifier: 0
@@ -88,6 +88,8 @@ MonoBehaviour:
   hitEarthMultiplier: 1
   hitPhysicalMultiplier: 1
   splashRadiusModifier: 0
+  statusEffectChance: 0
+  statuseffectDuration: 0
 --- !u!135 &13500000
 SphereCollider:
   m_ObjectHideFlags: 1
@@ -106,7 +108,27 @@ Prefab:
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
-    m_Modifications: []
+    m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: itemName
+      value: Up Global Damage
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: itemColour.r
+      value: .507352948
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: itemColour.g
+      value: .507352948
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: itemColour.b
+      value: .507352948
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: itemColour.a
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 100000}

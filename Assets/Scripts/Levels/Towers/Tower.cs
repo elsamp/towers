@@ -28,6 +28,7 @@ public class Tower : MonoBehaviour {
 
 	private float lastFireTime = 0;
 	private float currentClipCount;
+    private int gemSlotIndex = 0;
 
 	// Use this for initialization
 	void Start () {
@@ -91,6 +92,23 @@ public class Tower : MonoBehaviour {
 			turret.RemoveTarget();
 		}
 	}
+
+    public void AddRune(Gem gem)
+    {
+        if (gemSlotIndex <= gemSlots.Length)
+        {
+            Debug.Log("Tower get's rune: " + gem.itemName);
+
+            gemSlots[gemSlotIndex].SetGem(gem);
+            gemSlotIndex++;
+        }
+        
+    }
+
+    public void SetOffering()
+    {
+        Debug.Log("Tower get's offering: ");
+    }
 
 	public void AddPotentailTarget(Enemy enemy){
 

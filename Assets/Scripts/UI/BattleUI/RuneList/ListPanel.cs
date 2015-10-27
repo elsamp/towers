@@ -1,9 +1,9 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class RuneListPanel : MonoBehaviour {
+public class ListPanel : MonoBehaviour {
 
-    public RuneItemContainer itemContainer;
+    public ItemContainer itemContainer;
     public Gem[] availibleRunes;
 
     // Use this for initialization
@@ -18,6 +18,6 @@ public class RuneListPanel : MonoBehaviour {
 
     private void populateContainerWithRunes(Gem[] gemsToPopulate)
     {
-        itemContainer.populateWithRunes(gemsToPopulate);
+        itemContainer.populateWithItems(gemsToPopulate);
     }
 }

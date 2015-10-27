@@ -73,9 +73,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a766ade31e6f0c469b3bb34c3e410e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gemName: Point Blank
-  gemColour: {r: .433823526, g: .433823526, b: .433823526, a: 1}
-  gemCost: 5
+  itemName: Point Blank
+  itemColour: {r: 1, g: .441176474, b: .868965507, a: 1}
+  itemCost: 0
   clipSizeModifier: 0
   clipDelayTimeModifier: 0
   reloadRateModifier: 0
@@ -120,6 +120,26 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: hitPhysicalMultiplier
       value: 1.45000005
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: itemName
+      value: Point Blank
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: itemColour.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: itemColour.g
+      value: .441176474
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: itemColour.b
+      value: .868965507
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: itemColour.a
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}

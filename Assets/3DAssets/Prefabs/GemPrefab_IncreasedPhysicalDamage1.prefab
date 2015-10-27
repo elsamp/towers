@@ -73,9 +73,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a766ade31e6f0c469b3bb34c3e410e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gemName: Physical Damage
-  gemColour: {r: .566176474, g: .498419046, b: .320555806, a: 1}
-  gemCost: 5
+  itemName: Up Physical Damage
+  itemColour: {r: .867647052, g: .216911763, b: .216911763, a: 1}
+  itemCost: 0
   clipSizeModifier: 0
   clipDelayTimeModifier: 0
   reloadRateModifier: .0500000007
@@ -120,6 +120,26 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: reloadRateModifier
       value: .0500000007
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: itemName
+      value: Up Physical Damage
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: itemColour.r
+      value: .867647052
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: itemColour.g
+      value: .216911763
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: itemColour.b
+      value: .216911763
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: itemColour.a
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}

@@ -73,9 +73,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a766ade31e6f0c469b3bb34c3e410e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gemName: Elemental Chance
-  gemColour: {r: .904411793, g: .359104693, b: .359104693, a: 1}
-  gemCost: 5
+  itemName: Elemental Chance
+  itemColour: {r: .167279422, g: .875, b: .787145078, a: 1}
+  itemCost: 0
   clipSizeModifier: 0
   clipDelayTimeModifier: 0
   reloadRateModifier: 0
@@ -136,6 +136,26 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: hitPhysicalMultiplier
       value: 1.04999995
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: itemName
+      value: Elemental Chance
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: itemColour.r
+      value: .167279422
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: itemColour.g
+      value: .875
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: itemColour.b
+      value: .787145078
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: itemColour.a
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}

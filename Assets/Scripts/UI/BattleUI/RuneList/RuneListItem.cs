@@ -2,22 +2,21 @@
 using UnityEngine.UI;
 using System.Collections;
 
-public class RuneListItem : MonoBehaviour {
+public class RuneListItem : ListItem {
 
-    public Image runeImage;
 
-	// Use this for initialization
-	void Start () {
-	
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	
-	}
-
-    public void setRuneImage(string resourceName)
+    public override void performDropActionOnTarget(RaycastHit hit)
     {
-        this.GetComponentInChildren<Text>().text = resourceName;
+        Tower tower = hit.collider.GetComponentInParent<Tower>();
+
+        Debug.Log("Hit Something");
+
+        if (tower != null)
+        {
+            tower.AddRune(modifierObject as Gem);
+            Debug.Log("Hit TOWER!");
+        }
     }
+
+
 }

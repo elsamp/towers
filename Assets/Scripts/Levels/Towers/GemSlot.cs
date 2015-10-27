@@ -21,16 +21,11 @@ public class GemSlot : MonoBehaviour {
 		tower.GemChanged();
 
 		if(gem != null){
-			this.GetComponent<Renderer>().material.color = gem.gemColour;
-			LevelController.Instance.SpendReputation(gem.gemCost);
+			this.GetComponent<Renderer>().material.color = gem.itemColour;
+			LevelController.Instance.SpendReputation(gem.itemCost);
 		} else {
 			this.GetComponent<Renderer>().material.color = Color.white;
 		}
 	}
 
-	void OnMouseUp(){
-
-		GemSelector.Instance.isActive = true;
-		GemSelector.Instance.SetSelectedSlot(this);
-	}
 }

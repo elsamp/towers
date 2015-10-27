@@ -73,9 +73,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a766ade31e6f0c469b3bb34c3e410e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gemName: Rapid Fire
-  gemColour: {r: .904411793, g: .359104693, b: .359104693, a: 1}
-  gemCost: 5
+  itemName: Rapid Fire
+  itemColour: {r: 1, g: .908999979, b: .0955882072, a: 1}
+  itemCost: 0
   clipSizeModifier: 1
   clipDelayTimeModifier: -.0500000007
   reloadRateModifier: .100000001
@@ -120,6 +120,26 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: targetRadiusMultiplier
       value: .949999988
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: itemName
+      value: Rapid Fire
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: itemColour.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: itemColour.g
+      value: .908999979
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: itemColour.b
+      value: .0955882072
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: itemColour.a
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}

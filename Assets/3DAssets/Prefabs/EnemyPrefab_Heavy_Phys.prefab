@@ -12,7 +12,7 @@ GameObject:
   - 135: {fileID: 13500000}
   - 54: {fileID: 5400000}
   m_Layer: 0
-  m_Name: EnemyPrefab_Heavy
+  m_Name: EnemyPrefab_Heavy_Phys
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -328,15 +328,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lifeBar: {fileID: 11400002}
   body: {fileID: 100006}
-  maxLife: 70
+  maxLife: 80
   currentLife: 0
-  speed: 3
-  fireResist: .899999976
-  coldResist: .899999976
-  earthResist: .899999976
-  physicalResist: .100000001
+  speed: 2.5
+  fireResist: -.300000012
+  coldResist: -.300000012
+  earthResist: -.300000012
+  physicalResist: .75
   allResist: 0
-  killRewardAmount: 10
+  killRewardAmount: 12
   townDamageAmount: 25
 --- !u!114 &11400002
 MonoBehaviour:
@@ -423,28 +423,32 @@ Prefab:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 0}
-      propertyPath: maxLife
-      value: 70
-      objectReference: {fileID: 0}
-    - target: {fileID: 0}
-      propertyPath: fireResist
-      value: .899999976
-      objectReference: {fileID: 0}
-    - target: {fileID: 0}
-      propertyPath: coldResist
-      value: .899999976
-      objectReference: {fileID: 0}
-    - target: {fileID: 0}
-      propertyPath: earthResist
-      value: .899999976
-      objectReference: {fileID: 0}
-    - target: {fileID: 0}
-      propertyPath: physicalResist
-      value: .100000001
+      propertyPath: killRewardAmount
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: townDamageAmount
       value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: physicalResist
+      value: .75
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: fireResist
+      value: -.300000012
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: coldResist
+      value: -.300000012
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: earthResist
+      value: -.300000012
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: speed
+      value: 2.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}

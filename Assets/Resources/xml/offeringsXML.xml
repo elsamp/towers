@@ -1,24 +1,20 @@
 <towerModifiers>
-	<region region = "NUTRAL">
+	<modifierList>
 		<modifier itemID = "" itemName = "" itemCost = "" spriteName = "" >
 			<modifierProperties
 				clipSizeModifier = ""
 				clipDelayTimeModifier = ""
 				reloadRateModifier = ""
 				numberOfTargetsModifier = ""
-				targetRadiusModifier = ""
+				targetRadiusMultiplier = ""
 				hitSplashMultiplier = ""
-				hitGlobalMultiplier = ""
-				hitFireMultiplier = ""
-				hitColdMultiplier = ""
-				hitEarthMultiplier = ""
 				hitPhysicalMultiplier = ""
 				splashRadiusModifier = ""
-				statusEffectChance = ""
-				statuseffectDuration = ""
+				statusEffectChanceMultiplier = ""
+				statusEffectDurationModifier = ""
 				>
 			</modifierProperties>
 			<duration></duration>
 		</modifier>
-	</region>
+	</modifierList>
 </towerModifiers>

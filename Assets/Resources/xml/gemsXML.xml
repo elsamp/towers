@@ -1,24 +1,39 @@
 <towerModifiers>
-	<region region = "NUTRAL">
-		<modifier itemID = "" itemName = "" itemCost = "" spriteName = "" >
+	<modifierList>
+	
+		<modifier itemID = "GEM-01" itemName = "splitShot" itemCost = "" spriteName = "" >
 			<modifierProperties
-				clipSizeModifier = ""
-				clipDelayTimeModifier = ""
-				reloadRateModifier = ""
-				numberOfTargetsModifier = ""
-				targetRadiusModifier = ""
-				hitSplashMultiplier = ""
-				hitGlobalMultiplier = ""
-				hitFireMultiplier = ""
-				hitColdMultiplier = ""
-				hitEarthMultiplier = ""
-				hitPhysicalMultiplier = ""
-				splashRadiusModifier = ""
-				statusEffectChance = ""
-				statuseffectDuration = ""
+				clipSizeModifier = "0"
+				clipDelayTimeModifier = "0"
+				reloadRateModifier = "0.1"
+				numberOfTargetsModifier = "1"
+				targetRadiusMultiplier = "1"
+				hitSplashMultiplier = "1"
+				hitPhysicalMultiplier = "0.9"
+				splashRadiusModifier = "0"
+				statusEffectChanceMultiplier = "1"
+				statusEffectDurationModifier = "0"
 				>
 			</modifierProperties>
 			<duration></duration>
 		</modifier>
-	</region>
+		
+		<modifier itemID = "GEM-02" itemName = "rapidFire" itemCost = "" spriteName = "" >
+			<modifierProperties
+				clipSizeModifier = "1"
+				clipDelayTimeModifier = "-0.05"
+				reloadRateModifier = "0.1"
+				numberOfTargetsModifier = "0"
+				targetRadiusMultiplier = "0.95"
+				hitSplashMultiplier = "1"
+				hitPhysicalMultiplier = "0.9"
+				splashRadiusModifier = "0"
+				statusEffectChanceMultiplier = "1"
+				statusEffectDurationModifier = "0"
+				>
+			</modifierProperties>
+			<duration></duration>
+		</modifier>
+		
+	</modifierList>
 </towerModifiers>

@@ -1,24 +1,47 @@
 <towerModifiers>
 	<modifierList>
-		<modifier itemID = "" itemName = "" itemCost = "" spriteName = "" >
+	
+		<modifier itemID = "OFFER-1-12" itemName = "Lost jewel" itemCost = "" spriteName = "" >
 			<modifierProperties
-				clipSizeModifier = ""
-				clipDelayTimeModifier = ""
-				reloadRateModifier = ""
-				numberOfTargetsModifier = ""
-				targetRadiusMultiplier = ""
-				hitSplashMultiplier = ""
-				hitPhysicalMultiplier = ""
-				splashRadiusModifier = ""
-				statusEffectChanceMultiplier = ""
-				statusEffectDurationModifier = ""
-				coldConversionRate = ""
-				fireConversionRate = ""
-				earthConversionRate = ""
-				baseStatusEffectChance = ""
+				clipSizeModifier = "0"
+				clipDelayTimeModifier = "0"
+				reloadRateModifier = "-0.15"
+				numberOfTargetsModifier = "0"
+				targetRadiusMultiplier = "1"
+				hitSplashMultiplier = "1"
+				hitPhysicalMultiplier = "1"
+				splashRadiusModifier = "0"
+				statusEffectChanceMultiplier = "1"
+				statusEffectDurationModifier = "0"
+				coldConversionRate = "0"
+				fireConversionRate = "0"
+				earthConversionRate = "0"
+				baseStatusEffectChance = "0"
 				>
 			</modifierProperties>
-			<duration></duration>
+			<duration>8</duration>
 		</modifier>
+		
+		<modifier itemID = "OFFER-4-05" itemName = "Death's shroud" itemCost = "" spriteName = "" >
+			<modifierProperties
+				clipSizeModifier = "0"
+				clipDelayTimeModifier = "0"
+				reloadRateModifier = "0"
+				numberOfTargetsModifier = "0"
+				targetRadiusMultiplier = "1"
+				hitSplashMultiplier = "1"
+				hitPhysicalMultiplier = "1"
+				splashRadiusModifier = "0"
+				statusEffectChanceMultiplier = "1"
+				statusEffectDurationModifier = "0"
+				coldConversionRate = "0"
+				fireConversionRate = "0"
+				earthConversionRate = "1"
+				baseStatusEffectChance = "0.4"
+				>
+			</modifierProperties>
+			<duration>10</duration>
+		</modifier>
+		
 	</modifierList>
 </towerModifiers>

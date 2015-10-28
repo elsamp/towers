@@ -13,10 +13,10 @@
 				splashRadiusModifier = "0"
 				statusEffectChanceMultiplier = "1"
 				statusEffectDurationModifier = "0"
-				coldConversionRate = ""
-				fireConversionRate = ""
-				earthConversionRate = ""
-				baseStatusEffectChance = ""
+				coldConversionRate = "0"
+				fireConversionRate = "0"
+				earthConversionRate = "0"
+				baseStatusEffectChance = "0"
 				>
 			</modifierProperties>
 			<duration></duration>
@@ -34,10 +34,10 @@
 				splashRadiusModifier = "0"
 				statusEffectChanceMultiplier = "1"
 				statusEffectDurationModifier = "0"
-				coldConversionRate = ""
-				fireConversionRate = ""
-				earthConversionRate = ""
-				baseStatusEffectChance = ""
+				coldConversionRate = "0"
+				fireConversionRate = "0"
+				earthConversionRate = "0"
+				baseStatusEffectChance = "0"
 				>
 			</modifierProperties>
 			<duration></duration>

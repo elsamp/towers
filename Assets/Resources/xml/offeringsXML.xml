@@ -12,6 +12,10 @@
 				splashRadiusModifier = ""
 				statusEffectChanceMultiplier = ""
 				statusEffectDurationModifier = ""
+				coldConversionRate = ""
+				fireConversionRate = ""
+				earthConversionRate = ""
+				baseStatusEffectChance = ""
 				>
 			</modifierProperties>
 			<duration></duration>

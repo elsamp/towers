@@ -1,7 +1,7 @@
 <towerModifiers>
 	<modifierList>
 	
-		<modifier itemID = "OFFER-1-12" itemName = "Lost jewel" itemCost = "" spriteName = "" >
+		<modifier itemID = "OFFER-1-12" itemName = "Lost jewel" itemCost = "0" spriteName = "" >
 			<modifierProperties
 				clipSizeModifier = "0"
 				clipDelayTimeModifier = "0"
@@ -22,7 +22,7 @@
 			<duration>8</duration>
 		</modifier>
 		
-		<modifier itemID = "OFFER-4-05" itemName = "Death's shroud" itemCost = "" spriteName = "" >
+		<modifier itemID = "OFFER-4-05" itemName = "Death's shroud" itemCost = "0" spriteName = "" >
 			<modifierProperties
 				clipSizeModifier = "0"
 				clipDelayTimeModifier = "0"

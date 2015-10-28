@@ -19,7 +19,7 @@
 				baseStatusEffectChance = "0"
 				>
 			</modifierProperties>
-			<duration></duration>
+			<duration>-1</duration>
 		</modifier>
 		
 		<modifier itemID = "GEM-02" itemName = "rapidFire" itemCost = "" spriteName = "" >
@@ -40,7 +40,7 @@
 				baseStatusEffectChance = "0"
 				>
 			</modifierProperties>
-			<duration></duration>
+			<duration>-1</duration>
 		</modifier>
 		
 	</modifierList>

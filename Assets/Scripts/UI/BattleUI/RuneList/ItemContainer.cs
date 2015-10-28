@@ -9,6 +9,9 @@ public class ItemContainer : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+
+        ModifierImporter importer = new ModifierImporter();
+        importer.deserializeOfferings();
 	
 	}
 	

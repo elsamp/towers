@@ -7,7 +7,7 @@ public class GemSelector : MonoBehaviour {
 	public bool isActive;
 
 	private GemSlot selectedSlot;
-    private Ink ink;
+    //private Ink ink;
 
 	private static GemSelector instance;
 
@@ -25,7 +25,7 @@ public class GemSelector : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        ink = new Ink(0, 0, 0, 0, Ink.InkElement.None);
+        //ink = new Ink(0, 0, 0, 0, Ink.InkElement.None);
     }
 	
 	// Update is called once per frame
@@ -44,7 +44,7 @@ public class GemSelector : MonoBehaviour {
 			for (int index = 0 ; index < availibleGems.Length ; index++){
 				if (GUI.Button(new Rect(10, 50 + (30 * index), 150, 20), availibleGems[index].itemName)){
 
-                    availibleGems[index].ink = ink;
+                    //availibleGems[index].ink = ink;
 					selectedSlot.SetGem(availibleGems[index]); 
 					isActive = false;
 				}
@@ -59,17 +59,17 @@ public class GemSelector : MonoBehaviour {
 
             if (GUI.Button(new Rect(10, 10, 50, 20), "cold"))
             {
-                ink = new Ink(0.3f,0,0,0.1f,Ink.InkElement.Cold);
+                //ink = new Ink(0.3f,0,0,0.1f,Ink.InkElement.Cold);
             }
 
             if (GUI.Button(new Rect(70, 10, 50, 20), "earth"))
             {
-                ink = new Ink(0, 0, 0.3f,0.1f, Ink.InkElement.Earth);
+                //ink = new Ink(0, 0, 0.3f,0.1f, Ink.InkElement.Earth);
             }
 
             if (GUI.Button(new Rect(140, 10, 50, 20), "fire"))
             {
-                ink = new Ink(0, 0.3f, 0, 0.1f, Ink.InkElement.Fire);
+                //ink = new Ink(0, 0.3f, 0, 0.1f, Ink.InkElement.Fire);
             }
         }
 	}

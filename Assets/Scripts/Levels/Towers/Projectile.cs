@@ -85,10 +85,6 @@ public class Projectile : MonoBehaviour {
 
 			if(gem != null){
 				hitSplashMultiplier *= gem.hitSplashMultiplier;
-				hitGlobalMultiplier *= gem.hitGlobalMultiplier;
-				hitFireMultiplier *= gem.hitFireMultiplier;
-				hitColdMultiplier *= gem.hitColdMultiplier;
-				hitEarthMultiplier *= gem.hitEarthMultiplier;
 				hitPhysicalMultiplier *= gem.hitPhysicalMultiplier;
 				splashRadiusModifier += gem.splashRadiusModifier;
                 /*

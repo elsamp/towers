@@ -1,11 +1,15 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class TowerModifier : MonoBehaviour {
+public class TowerModifier {
+
+    public enum ModifierTypes { None, Gem, Offering}
 
     public string itemName;
     public Color itemColour;
     public float itemCost;
+
+    public ModifierTypes modifierType;
 
     //Tower Modifiers
     public float clipSizeModifier;
@@ -16,10 +20,6 @@ public class TowerModifier : MonoBehaviour {
 
     // Projectile Modifiers
     public float hitSplashMultiplier = 1;
-    public float hitGlobalMultiplier = 1;
-    public float hitFireMultiplier = 1;
-    public float hitColdMultiplier = 1;
-    public float hitEarthMultiplier = 1;
     public float hitPhysicalMultiplier = 1;
     public float splashRadiusModifier = 0;
 
@@ -27,13 +27,24 @@ public class TowerModifier : MonoBehaviour {
     public float statuseffectDuration = 0;
 
 
-    // Use this for initialization
-    void Start () {
-	
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	
-	}
+    public TowerModifier(Modifier model)
+    {
+        modifierType = ModifierTypes.None;
+
+        itemName = model.ItemName;
+        itemCost = model.ItemCost;
+
+        clipSizeModifier = model.Properties.ClipSizeModifier;
+        clipDelayTimeModifier = model.Properties.ClipDelayTimeModifie;
+        reloadRateModifier = model.Properties.ReloadRateModifier;
+        numberOfTargetsModifier = model.Properties.NumberOfTargetsModifier;
+        targetRadiusMultiplier = model.Properties.TargetRadiusMultiplier;
+
+        hitSplashMultiplier = model.Properties.HitSplashMultiplier;
+        hitPhysicalMultiplier = model.Properties.HitPhysicalMultiplier;
+        splashRadiusModifier = model.Properties.SplashRadiusModifier;
+
+        statusEffectChance = model.Properties.StatusEffectChanceMultiplier;
+        statuseffectDuration = model.Properties.StatusEffectDurationModifier;
+    }
 }

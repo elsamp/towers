@@ -1,15 +1,18 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class OfferingListItem : MonoBehaviour {
+public class OfferingListItem : ListItem {
 
-	// Use this for initialization
-	void Start () {
-	
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	
-	}
+    public override void performDropActionOnTarget(RaycastHit hit)
+    {
+        Tower tower = hit.collider.GetComponentInParent<Tower>();
+
+        Debug.Log("Offering -- Hit Something");
+
+        if (tower != null)
+        {
+            tower.SetOffering(modifierObject as Offering);
+            Debug.Log("Hit TOWER!");
+        }
+    }
 }

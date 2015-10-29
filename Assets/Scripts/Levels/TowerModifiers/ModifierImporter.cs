@@ -5,9 +5,9 @@ using System.Text;
 using System.Collections.Generic;
 using System.Xml.Serialization;
 
-public class ModifierImporter {
+public static class ModifierImporter {
 
-	private List<Modifier> deserializeModifiers(string filePath)
+	private static List<Modifier> deserializeModifiers(string filePath)
     {
         List<Modifier> modifiers = new List<Modifier>();
 
@@ -25,30 +25,28 @@ public class ModifierImporter {
         return modifiers;
     }
 
-    public List<Gem> deserializeGems()
+    public static Gem[] deserializeGems()
     {
         List<Gem> gems = new List<Gem>();
 
         foreach (Modifier mod in deserializeModifiers("xml/gemsXML"))
         {
-            // create new Gem using constructer passing Modifier
-            // add to gems list
+            gems.Add(new Gem(mod));
         }
 
-        return gems;
+        return gems.ToArray();
     }
 
-    public List<Offering> deserializeOfferings()
+    public static Offering[] deserializeOfferings()
     {
         List<Offering> offerings = new List<Offering>();
 
         foreach (Modifier mod in deserializeModifiers("xml/offeringsXML"))
         {
-            // create new Offering using constructer passing Modifier
-            // add to offering list
+            offerings.Add(new Offering(mod));
         }
 
-        return offerings;
+        return offerings.ToArray();
     }
 
 }

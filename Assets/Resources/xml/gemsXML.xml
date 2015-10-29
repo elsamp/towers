@@ -1,7 +1,7 @@
 <towerModifiers>
 	<modifierList>
 	
-		<modifier itemID = "GEM-01" itemName = "splitShot" itemCost = "" spriteName = "" >
+		<modifier itemID = "GEM-01" itemName = "splitShot" itemCost = "0" spriteName = "" >
 			<modifierProperties
 				clipSizeModifier = "0"
 				clipDelayTimeModifier = "0"
@@ -22,7 +22,7 @@
 			<duration>-1</duration>
 		</modifier>
 		
-		<modifier itemID = "GEM-02" itemName = "rapidFire" itemCost = "" spriteName = "" >
+		<modifier itemID = "GEM-02" itemName = "rapidFire" itemCost = "0" spriteName = "" >
 			<modifierProperties
 				clipSizeModifier = "1"
 				clipDelayTimeModifier = "-0.05"

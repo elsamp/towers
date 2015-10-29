@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class LifeBarT : MonoBehaviour {
+public class LifeBar : MonoBehaviour {
 
 	public GameObject maxLifeSprite;
 	public GameObject currentLifeSprite;

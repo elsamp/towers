@@ -5,13 +5,9 @@ public class Offering : TowerModifier {
 
     public float durration;
 
-	// Use this for initialization
-	void Start () {
-	
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	
-	}
+	public Offering(Modifier model) :base(model)
+    {
+        modifierType = ModifierTypes.Offering;
+        durration = model.Duration;
+    }
 }

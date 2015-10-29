@@ -3,17 +3,10 @@ using System.Collections;
 
 public class Gem : TowerModifier {
 
-    // can provide other things
-    public Ink ink;
-
-	// Use this for initialization
-	void Start () {
-	
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	
-	}
+    public Gem(Modifier model) : base(model)
+    {
+        modifierType = ModifierTypes.Gem;
+        // nothing to do yet ... but there will be I'm sure :)
+    }
 
 }

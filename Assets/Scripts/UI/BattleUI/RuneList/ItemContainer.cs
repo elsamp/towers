@@ -7,11 +7,9 @@ public class ItemContainer : MonoBehaviour {
     // again make parent class ListItem and dirrive from it
     public ListItem itemTemplatePrefab;
 
+
 	// Use this for initialization
 	void Start () {
-
-        ModifierImporter importer = new ModifierImporter();
-        importer.deserializeOfferings();
 	
 	}
 	
@@ -20,7 +18,16 @@ public class ItemContainer : MonoBehaviour {
 	
 	}
 
-    // TODO: Give tower modifiers a parent class and pass that.
+    public void show()
+    {
+        this.gameObject.SetActive(true);
+    }
+
+    public void hide()
+    {
+        this.gameObject.SetActive(false);
+    }
+
     public void populateWithItems(TowerModifier[] modifiers)
     {
         RectTransform rectTransform = GetComponent<RectTransform>();
@@ -29,6 +36,7 @@ public class ItemContainer : MonoBehaviour {
 
         for (int i = 0; i < modifiers.Length; i++)
         {
+            Debug.Log("A MODIFIER");
             ListItem item = Instantiate(itemTemplatePrefab) as ListItem;
             item.setItemImage(modifiers[i].itemName);
             item.modifierObject = modifiers[i];

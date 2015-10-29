@@ -105,9 +105,10 @@ public class Tower : MonoBehaviour {
         
     }
 
-    public void SetOffering()
+    public void SetOffering(Offering offering)
     {
-        Debug.Log("Tower get's offering: ");
+        Debug.Log("Tower get's offering: " + offering.itemName);
+        // TODO: Make the logic for this do something
     }
 
 	public void AddPotentailTarget(Enemy enemy){

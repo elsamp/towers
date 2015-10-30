@@ -563,6 +563,7 @@ GameObject:
   - 224: {fileID: 22415206}
   - 222: {fileID: 22292292}
   - 114: {fileID: 11484586}
+  - 114: {fileID: 11471886}
   m_Layer: 5
   m_Name: LifeBar_Panel
   m_TagString: Untagged
@@ -2527,7 +2528,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: .479029983, g: .779411793, b: .23496972, a: 1}
+  m_Color: {r: .489649206, g: .720588207, b: .302011222, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -3074,6 +3075,21 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: 1
+--- !u!114 &11471886
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 154242}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa6a8604df9daac4e8320d8fb3761073, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxControl: 100
+  currentControl: 80
+  backgroundBar: {fileID: 11435566}
+  frontBar: {fileID: 11450622}
 --- !u!114 &11472622
 MonoBehaviour:
   m_ObjectHideFlags: 1

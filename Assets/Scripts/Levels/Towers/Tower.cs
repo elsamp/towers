@@ -18,6 +18,8 @@ public class Tower : MonoBehaviour {
 	public float reloadTimeBase;
 	public float numberOfTargetsBase;
 
+    public MeshRenderer towerRenderer;
+
 	private float clipMaxSizeModifier;
 	private float clipDelayTimeModifier;
 	private float reloadTimeModifier;
@@ -29,6 +31,9 @@ public class Tower : MonoBehaviour {
 	private float lastFireTime = 0;
 	private float currentClipCount;
     private int gemSlotIndex = 0;
+
+    private Offering appliedOffering;
+    private float offeringEndTime;
 
 	// Use this for initialization
 	void Start () {
@@ -91,6 +96,11 @@ public class Tower : MonoBehaviour {
 		} else if(turret.currentTarget){
 			turret.RemoveTarget();
 		}
+
+        if (appliedOffering != null && offeringEndTime < Time.time)
+        {
+            EndOfferingDuration();
+        }
 	}
 
     public void AddRune(Gem gem)
@@ -108,10 +118,43 @@ public class Tower : MonoBehaviour {
     public void SetOffering(Offering offering)
     {
         Debug.Log("Tower get's offering: " + offering.itemName);
-        // TODO: Make the logic for this do something
+
+        appliedOffering = offering;
+        StartOfferingDuration();
+        
     }
 
-	public void AddPotentailTarget(Enemy enemy){
+    private void StartOfferingDuration()
+    {
+        towerRenderer.material.color = Color.green;
+
+        clipMaxSizeModifier += appliedOffering.clipSizeModifier;
+        clipDelayTimeModifier += appliedOffering.clipDelayTimeModifier;
+        reloadTimeModifier += appliedOffering.reloadRateModifier;
+        numberOfTargetsModifier += appliedOffering.numberOfTargetsModifier;
+        targetRadiusMultiplier *= appliedOffering.targetRadiusMultiplier;
+
+        targetRadiusArea.radius = targetRadiusBase * targetRadiusMultiplier;
+
+        offeringEndTime = Time.time + appliedOffering.durration;
+    }
+
+    private void EndOfferingDuration()
+    {
+        towerRenderer.material.color = Color.gray;
+
+        clipMaxSizeModifier -= appliedOffering.clipSizeModifier;
+        clipDelayTimeModifier -= appliedOffering.clipDelayTimeModifier;
+        reloadTimeModifier -= appliedOffering.reloadRateModifier;
+        numberOfTargetsModifier -= appliedOffering.numberOfTargetsModifier;
+        targetRadiusMultiplier /= appliedOffering.targetRadiusMultiplier;
+
+        targetRadiusArea.radius = targetRadiusBase * targetRadiusMultiplier;
+
+        appliedOffering = null;
+    }
+
+    public void AddPotentailTarget(Enemy enemy){
 
 		targetableEnemies.Add(enemy);
 	}
@@ -153,7 +196,7 @@ public class Tower : MonoBehaviour {
 		targetRadiusArea.radius = targetRadiusBase * targetRadiusMultiplier;
 	}
 
-	public void ApplyGemProjectileModifiers(Projectile projectile){
+	public void ApplyProjectileModifiers(Projectile projectile){
 
 		Gem[] gems = new Gem[3];
 
@@ -165,6 +208,12 @@ public class Tower : MonoBehaviour {
 		}
 
 		projectile.UpdateMultipliersForGems(gems);
+
+        if(appliedOffering != null)
+        {
+            projectile.UpdateMultipliersForOffering(appliedOffering);
+        }
+        
 	}
 
 	private void FireProjectile(){
@@ -173,7 +222,7 @@ public class Tower : MonoBehaviour {
 
 			Projectile projectile = Instantiate(projectilePrefab, projectileSpawnLocation.transform.position, Quaternion.identity) as Projectile;
 			projectile.SetTarget(targetableEnemies[targetIndex]);
-			ApplyGemProjectileModifiers(projectile);
+			ApplyProjectileModifiers(projectile);
 		}
 
 		lastFireTime = Time.time;

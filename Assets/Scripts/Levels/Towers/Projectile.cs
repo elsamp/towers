@@ -4,6 +4,8 @@ using System.Collections.Generic;
 
 public class Projectile : MonoBehaviour {
 
+    enum DamageElements { None, Cold, Fire, Earth }
+
 	public SphereCollider hitRadiusArea;
 	public SphereCollider splashRadiusArea;
 	public GameObject bulletGO; //temp
@@ -31,10 +33,7 @@ public class Projectile : MonoBehaviour {
     private float fireConversionRate = 0;
     private float earthConversionRate = 0;
 
-    private float coldStatusChance = 0;
-    private float fireStatusChance = 0;
-    private float earthStatusChance = 0;
-    private float globalStatusChance = 0;
+    private float globalStatusChance = 0.3f;
 
     private float splashRadiusModifier = 0;
 	private float splashDamageMitigator = 0.2f;
@@ -79,47 +78,35 @@ public class Projectile : MonoBehaviour {
 
 	public void UpdateMultipliersForGems(Gem[] gems){
 
-		// This is only called once when the projectile is created so we don't have to reset the values when we start
+        // This is only called once when the projectile is created so we don't have to reset the values when we start
 
-		foreach(Gem gem in gems){
-
-			if(gem != null){
-				hitSplashMultiplier *= gem.hitSplashMultiplier;
-				hitPhysicalMultiplier *= gem.hitPhysicalMultiplier;
-				splashRadiusModifier += gem.splashRadiusModifier;
-                /*
-                fireConversionRate += gem.ink.fireConversion;
-                earthConversionRate += gem.ink.earthConversion;
-                coldConversionRate += gem.ink.coldConversion;
-                statusEffectDuration += gem.statuseffectDuration;
-
-                switch (gem.ink.inkElement)
-                {
-                    case Ink.InkElement.Cold:
-                        coldStatusChance += gem.ink.elementalEffectChance;
-                        globalStatusChance += gem.statusEffectChance;
-                        break;
-                    case Ink.InkElement.Fire:
-                        fireStatusChance += gem.ink.elementalEffectChance;
-                        globalStatusChance += gem.statusEffectChance;
-                        break;
-                    case Ink.InkElement.Earth:
-                        earthStatusChance += gem.ink.elementalEffectChance;
-                        globalStatusChance += gem.statusEffectChance;
-                        break;
-                    default:
-                        break;
-                }
-                */
-			}
-		}
-
-        coldStatusChance += (coldStatusChance * globalStatusChance);
-        fireStatusChance += (fireStatusChance * globalStatusChance);
-        earthStatusChance += (earthStatusChance * globalStatusChance);
+        foreach (Gem gem in gems)
+        {
+            if (gem != null)
+            {
+                hitSplashMultiplier *= gem.hitSplashMultiplier;
+                hitPhysicalMultiplier *= gem.hitPhysicalMultiplier;
+                splashRadiusModifier += gem.splashRadiusModifier;
+            }
+        } 
 
         //Debug.Log("Elemental conversion rates| Cold: " + coldConversionRate + " Fire: " + fireConversionRate + " Earth: " + earthConversionRate);
 
+    }
+
+    public void UpdateMultipliersForOffering(Offering offering)
+    {
+        hitSplashMultiplier *= offering.hitSplashMultiplier;
+        hitPhysicalMultiplier *= offering.hitPhysicalMultiplier;
+        splashRadiusModifier += offering.splashRadiusModifier;
+        
+        fireConversionRate += offering.fireConversionRate;
+        earthConversionRate += offering.earthConversionRate;
+        coldConversionRate += offering.coldConversionRate;
+
+        statusEffectDuration += offering.statuseffectDuration;
+        globalStatusChance += offering.statusEffectChance;
+        
     }
 
 	private bool HaveArrived(){
@@ -136,7 +123,6 @@ public class Projectile : MonoBehaviour {
 
 		//Debug.Log("Target Hit!");
 		ApplyTargetDamage();
-        ApplyElementalEffect();
 
 		targetHit = true;
 	}
@@ -194,16 +180,11 @@ public class Projectile : MonoBehaviour {
     }
 
 	private void ApplyTargetDamage(){
-		targetEnemy.TakeDamage(ConvertedPhysicalDamage(), ColdDamage(), FireDamage(),EarthDamage());
+		targetEnemy.TakeDamage(ConvertedPhysicalDamage(), ColdDamage(), FireDamage(),EarthDamage(), globalStatusChance,statusEffectDuration);
 
         Debug.Log("Enemy TARGET hit with damage| Physical: " + ConvertedPhysicalDamage() + 
             " Cold: " + ColdDamage() + " Fire: " + FireDamage() + " Earth: " + EarthDamage());
 	}
-
-    private void ApplyElementalEffect()
-    {
-        targetEnemy.TakeStatusEffect(coldStatusChance, fireStatusChance, earthStatusChance, statusEffectDuration);
-    }
 
     private void ApplySplashDamage(){
 
@@ -215,7 +196,7 @@ public class Projectile : MonoBehaviour {
         foreach (Enemy enemy in splashTargetEnemies){
 			if(enemy != null){
 
-				enemy.TakeDamage(physicalSlpash,coldSplash,fireSplash,earthSplash);
+				enemy.TakeDamage(physicalSlpash,coldSplash,fireSplash,earthSplash, globalStatusChance,statusEffectDuration);
 
                 /*Debug.Log("Enemy SPLASH hit with damage| Physical: " + physicalSlpash +
             " Cold: " + coldSplash + " Fire: " + fireSplash + " Earth: " + earthSplash);*/

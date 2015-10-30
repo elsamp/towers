@@ -577,6 +577,7 @@ MonoBehaviour:
   clipDelayTimeBase: .200000003
   reloadTimeBase: 1
   numberOfTargetsBase: 1
+  towerRenderer: {fileID: 2300000}
   targetableEnemies: []
 --- !u!114 &11400002
 MonoBehaviour:
@@ -602,7 +603,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: adf569bb126bf644685bd1652bbe3510, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gem: {fileID: 0}
   tower: {fileID: 11400000}
 --- !u!114 &11400008
 MonoBehaviour:
@@ -615,7 +615,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: adf569bb126bf644685bd1652bbe3510, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gem: {fileID: 0}
   tower: {fileID: 11400000}
 --- !u!114 &11400010
 MonoBehaviour:
@@ -628,7 +627,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: adf569bb126bf644685bd1652bbe3510, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gem: {fileID: 0}
   tower: {fileID: 11400000}
 --- !u!114 &11400012
 MonoBehaviour:
@@ -678,6 +676,10 @@ Prefab:
       propertyPath: cost
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: towerRenderer
+      value: 
+      objectReference: {fileID: 2300000}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 100000}

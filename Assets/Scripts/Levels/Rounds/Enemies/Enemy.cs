@@ -105,7 +105,7 @@ public class Enemy : MonoBehaviour {
 
 	}
 
-    public void TakeDamage(float physicalDamage, float coldDamage, float fireDamage, float earthDamage) {
+    public void TakeDamage(float physicalDamage, float coldDamage, float fireDamage, float earthDamage, float statusChance, float statusDuration) {
 
         float totalDamage = 0;
 
@@ -117,15 +117,31 @@ public class Enemy : MonoBehaviour {
         if (coldDamage > 0)
         {
             totalDamage += Mathf.Max(coldDamage - (coldDamage * coldResist), 0);
+
+            if (RollDiceForStatusEffect(statusChance))
+            {
+                AddColdStatus(statusDuration);
+            }
         }
 
         if (fireDamage > 0)
         {
             totalDamage += Mathf.Max(fireDamage - (fireDamage * fireResist), 0);
+
+            if (RollDiceForStatusEffect(statusChance))
+            {
+                AddFireStatus(statusDuration);
+            }
         }
+
         if (earthDamage > 0)
         {
             totalDamage += Mathf.Max(earthDamage - (earthDamage * earthResist), 0);
+
+            if (RollDiceForStatusEffect(statusChance))
+            {
+                AddEarthStatus(statusDuration);
+            }
         }
 
         totalDamage /= poisonMultiplier;
@@ -292,24 +308,6 @@ public class Enemy : MonoBehaviour {
     private void RemoveStatusEffect(GameObject statusEffect)
     {
         Destroy(statusEffect);
-    }
-
-    public void TakeStatusEffect(float coldChance, float fireChance, float earthChance, float effectDurration)
-    {
-        if(RollDiceForStatusEffect(coldChance))
-        {
-            AddColdStatus(effectDurration);
-        }
-
-        if (RollDiceForStatusEffect(fireChance))
-        {
-            AddFireStatus(effectDurration);
-        }
-
-        if (RollDiceForStatusEffect(earthChance))
-        {
-            AddEarthStatus(effectDurration);
-        }
     }
 
     public bool RollDiceForStatusEffect(float chance)

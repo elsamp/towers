@@ -1,7 +1,7 @@
 <towerModifiers>
 	<modifierList>
 	
-		<modifier itemID = "GEM-01" itemName = "Split Shot" itemCost = "0" spriteName = "" >
+		<modifier itemID = "GEM-01" itemName = "Split Shot" itemCost = "5" spriteName = "" >
 			<modifierProperties
 				clipSizeModifier = "0"
 				clipDelayTimeModifier = "0"
@@ -22,7 +22,7 @@
 			<duration>-1</duration>
 		</modifier>
 		
-		<modifier itemID = "GEM-02" itemName = "Rapid Fire" itemCost = "0" spriteName = "" >
+		<modifier itemID = "GEM-02" itemName = "Rapid Fire" itemCost = "5" spriteName = "" >
 			<modifierProperties
 				clipSizeModifier = "1"
 				clipDelayTimeModifier = "-0.05"
@@ -41,8 +41,9 @@
 				>
 			</modifierProperties>
 			<duration>-1</duration>
-			
-			<modifier itemID = "GEM-03" itemName = "Splash Damage" itemCost = "0" spriteName = "" >
+    </modifier>
+    
+		<modifier itemID = "GEM-03" itemName = "Splash Damage" itemCost = "5" spriteName = "" >
 			<modifierProperties
 				clipSizeModifier = "0"
 				clipDelayTimeModifier = "0"
@@ -61,8 +62,9 @@
 				>
 			</modifierProperties>
 			<duration>-1</duration>
-			
-			<modifier itemID = "GEM-04" itemName = "Splash Radius" itemCost = "0" spriteName = "" >
+    </modifier>
+    
+		<modifier itemID = "GEM-04" itemName = "Splash Radius" itemCost = "5" spriteName = "" >
 			<modifierProperties
 				clipSizeModifier = "0"
 				clipDelayTimeModifier = "0"
@@ -81,8 +83,9 @@
 				>
 			</modifierProperties>
 			<duration>-1</duration>
-			
-			<modifier itemID = "GEM-05" itemName = "Faster Reload" itemCost = "0" spriteName = "" >
+    </modifier>
+    
+		<modifier itemID = "GEM-05" itemName = "Faster Reload" itemCost = "5" spriteName = "" >
 			<modifierProperties
 				clipSizeModifier = "0"
 				clipDelayTimeModifier = "0"
@@ -100,9 +103,10 @@
 				baseStatusEffectChance = "0"
 				>
 			</modifierProperties>
-			<duration>-1</duration>
-			
-			<modifier itemID = "GEM-06" itemName = "Increased Range" itemCost = "0" spriteName = "" >
+			<duration>-1</duration> 
+    </modifier>
+    
+		<modifier itemID = "GEM-06" itemName = "Increased Range" itemCost = "5" spriteName = "" >
 			<modifierProperties
 				clipSizeModifier = "0"
 				clipDelayTimeModifier = "0"
@@ -121,8 +125,9 @@
 				>
 			</modifierProperties>
 			<duration>-1</duration>
-			
-			<modifier itemID = "GEM-07" itemName = "Added Damage" itemCost = "0" spriteName = "" >
+    </modifier>
+    
+		<modifier itemID = "GEM-07" itemName = "Added Damage" itemCost = "5" spriteName = "" >
 			<modifierProperties
 				clipSizeModifier = "0"
 				clipDelayTimeModifier = "0"
@@ -141,8 +146,9 @@
 				>
 			</modifierProperties>
 			<duration>-1</duration>
-			
-			<modifier itemID = "GEM-08" itemName = "Concentrated Effect" itemCost = "0" spriteName = "" >
+    </modifier>
+    
+		<modifier itemID = "GEM-08" itemName = "Concentrated Effect" itemCost = "5" spriteName = "" >
 			<modifierProperties
 				clipSizeModifier = "0"
 				clipDelayTimeModifier = "0"
@@ -161,8 +167,9 @@
 				>
 			</modifierProperties>
 			<duration>-1</duration>
-			
-			<modifier itemID = "GEM-09" itemName = "Point Blank" itemCost = "0" spriteName = "" >
+    </modifier>
+    
+		<modifier itemID = "GEM-09" itemName = "Point Blank" itemCost = "5" spriteName = "" >
 			<modifierProperties
 				clipSizeModifier = "0"
 				clipDelayTimeModifier = "0"
@@ -181,8 +188,9 @@
 				>
 			</modifierProperties>
 			<duration>-1</duration>
-			
-			<modifier itemID = "GEM-10" itemName = "Elemental Duration" itemCost = "0" spriteName = "" >
+    </modifier>
+    
+		<modifier itemID = "GEM-10" itemName = "Elemental Duration" itemCost = "5" spriteName = "" >
 			<modifierProperties
 				clipSizeModifier = "0"
 				clipDelayTimeModifier = "0"
@@ -201,8 +209,9 @@
 				>
 			</modifierProperties>
 			<duration>-1</duration>
-			
-			<modifier itemID = "GEM-11" itemName = "Elemental Chance" itemCost = "0" spriteName = "" >
+    </modifier>
+    
+		<modifier itemID = "GEM-11" itemName = "Elemental Chance" itemCost = "5" spriteName = "" >
 			<modifierProperties
 				clipSizeModifier = "0"
 				clipDelayTimeModifier = "0"
@@ -221,7 +230,6 @@
 				>
 			</modifierProperties>
 			<duration>-1</duration>
-			
 		</modifier>
 		
 	</modifierList>

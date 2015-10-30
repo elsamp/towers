@@ -1,6 +1,237 @@
 <towerModifiers>
 	<modifierList>
 	
+		<modifier itemID = "OFFER-1-01" itemName = "Small seeds" itemCost = "0" spriteName = "" >
+			<modifierProperties
+				clipSizeModifier = "0"
+				clipDelayTimeModifier = "0"
+				reloadRateModifier = "0"
+				numberOfTargetsModifier = "0"
+				targetRadiusMultiplier = "1"
+				hitSplashMultiplier = "1"
+				hitPhysicalMultiplier = "1.1"
+				splashRadiusModifier = "0"
+				statusEffectChanceMultiplier = "1"
+				statusEffectDurationModifier = "0"
+				coldConversionRate = "0"
+				fireConversionRate = "0"
+				earthConversionRate = "0"
+				baseStatusEffectChance = "0"
+				>
+			</modifierProperties>
+			<duration>10</duration>
+		</modifier>
+		
+		<modifier itemID = "OFFER-1-02" itemName = "Fallen leaf" itemCost = "0" spriteName = "" >
+			<modifierProperties
+				clipSizeModifier = "0"
+				clipDelayTimeModifier = "0"
+				reloadRateModifier = "-0.05"
+				numberOfTargetsModifier = "0"
+				targetRadiusMultiplier = "1"
+				hitSplashMultiplier = "1"
+				hitPhysicalMultiplier = "1"
+				splashRadiusModifier = "0"
+				statusEffectChanceMultiplier = "1"
+				statusEffectDurationModifier = "0"
+				coldConversionRate = "0"
+				fireConversionRate = "0"
+				earthConversionRate = "0"
+				baseStatusEffectChance = "0"
+				>
+			</modifierProperties>
+			<duration>10</duration>
+		</modifier>
+			
+		<modifier itemID = "OFFER-1-03" itemName = "Chipped pebble" itemCost = "0" spriteName = "" >
+			<modifierProperties
+				clipSizeModifier = "0"
+				clipDelayTimeModifier = "0"
+				reloadRateModifier = "0"
+				numberOfTargetsModifier = "0"
+				targetRadiusMultiplier = "1"
+				hitSplashMultiplier = "1"
+				hitPhysicalMultiplier = "1"
+				splashRadiusModifier = "0.3"
+				statusEffectChanceMultiplier = "1"
+				statusEffectDurationModifier = "0"
+				coldConversionRate = "0"
+				fireConversionRate = "0"
+				earthConversionRate = "0"
+				baseStatusEffectChance = "0"
+				>
+			</modifierProperties>
+			<duration>10</duration>
+		</modifier>		
+		
+		<modifier itemID = "OFFER-1-04" itemName = "Sapling needles" itemCost = "0" spriteName = "" >
+			<modifierProperties
+				clipSizeModifier = "0"
+				clipDelayTimeModifier = "0"
+				reloadRateModifier = "0"
+				numberOfTargetsModifier = "0"
+				targetRadiusMultiplier = "1"
+				hitSplashMultiplier = "1.5"
+				hitPhysicalMultiplier = "1"
+				splashRadiusModifier = "0"
+				statusEffectChanceMultiplier = "1"
+				statusEffectDurationModifier = "0"
+				coldConversionRate = "0"
+				fireConversionRate = "0"
+				earthConversionRate = "0"
+				baseStatusEffectChance = "0"
+				>
+			</modifierProperties>
+			<duration>10</duration>
+		</modifier>		
+					
+		<modifier itemID = "OFFER-1-05" itemName = "Cracked nut" itemCost = "0" spriteName = "" >
+			<modifierProperties
+				clipSizeModifier = "0"
+				clipDelayTimeModifier = "0"
+				reloadRateModifier = "0"
+				numberOfTargetsModifier = "0"
+				targetRadiusMultiplier = "1.2"
+				hitSplashMultiplier = "1"
+				hitPhysicalMultiplier = "1"
+				splashRadiusModifier = "0"
+				statusEffectChanceMultiplier = "1"
+				statusEffectDurationModifier = "0"
+				coldConversionRate = "0"
+				fireConversionRate = "0"
+				earthConversionRate = "0"
+				baseStatusEffectChance = "0"
+				>
+			</modifierProperties>
+			<duration>10</duration>
+		</modifier>		
+		
+		<modifier itemID = "OFFER-1-06" itemName = "Flower petal" itemCost = "0" spriteName = "" >
+			<modifierProperties
+				clipSizeModifier = "0"
+				clipDelayTimeModifier = "0"
+				reloadRateModifier = "0"
+				numberOfTargetsModifier = "0"
+				targetRadiusMultiplier = "1"
+				hitSplashMultiplier = "1"
+				hitPhysicalMultiplier = "1.15"
+				splashRadiusModifier = "0"
+				statusEffectChanceMultiplier = "1"
+				statusEffectDurationModifier = "0"
+				coldConversionRate = "0"
+				fireConversionRate = "0"
+				earthConversionRate = "0"
+				baseStatusEffectChance = "0"
+				>
+			</modifierProperties>
+			<duration>12</duration>
+		</modifier>		
+		
+		<modifier itemID = "OFFER-1-07" itemName = "Smooth stone" itemCost = "0" spriteName = "" >
+			<modifierProperties
+				clipSizeModifier = "0"
+				clipDelayTimeModifier = "0"
+				reloadRateModifier = "-0.1"
+				numberOfTargetsModifier = "0"
+				targetRadiusMultiplier = "1"
+				hitSplashMultiplier = "1"
+				hitPhysicalMultiplier = "1"
+				splashRadiusModifier = "0"
+				statusEffectChanceMultiplier = "1"
+				statusEffectDurationModifier = "0"
+				coldConversionRate = "0"
+				fireConversionRate = "0"
+				earthConversionRate = "0"
+				baseStatusEffectChance = "0"
+				>
+			</modifierProperties>
+			<duration>8</duration>
+		</modifier>		
+		
+		<modifier itemID = "OFFER-1-08" itemName = "Silver coin" itemCost = "0" spriteName = "" >
+			<modifierProperties
+				clipSizeModifier = "0"
+				clipDelayTimeModifier = "0"
+				reloadRateModifier = "0"
+				numberOfTargetsModifier = "0"
+				targetRadiusMultiplier = "1"
+				hitSplashMultiplier = "1"
+				hitPhysicalMultiplier = "1"
+				splashRadiusModifier = "0.5"
+				statusEffectChanceMultiplier = "1"
+				statusEffectDurationModifier = "0"
+				coldConversionRate = "0"
+				fireConversionRate = "0"
+				earthConversionRate = "0"
+				baseStatusEffectChance = "0"
+				>
+			</modifierProperties>
+			<duration>10</duration>	
+		</modifier>		
+			
+		<modifier itemID = "OFFER-1-09" itemName = "Delicate string" itemCost = "0" spriteName = "" >
+			<modifierProperties
+				clipSizeModifier = "0"
+				clipDelayTimeModifier = "0"
+				reloadRateModifier = "0"
+				numberOfTargetsModifier = "0"
+				targetRadiusMultiplier = "1"
+				hitSplashMultiplier = "2"
+				hitPhysicalMultiplier = "1"
+				splashRadiusModifier = "0"
+				statusEffectChanceMultiplier = "1"
+				statusEffectDurationModifier = "0"
+				coldConversionRate = "0"
+				fireConversionRate = "0"
+				earthConversionRate = "0"
+				baseStatusEffectChance = "0"
+				>
+			</modifierProperties>
+			<duration>10</duration>
+		</modifier>		
+					
+		<modifier itemID = "OFFER-1-10" itemName = "Paper crane" itemCost = "0" spriteName = "" >
+			<modifierProperties
+				clipSizeModifier = "0"
+				clipDelayTimeModifier = "0"
+				reloadRateModifier = "0"
+				numberOfTargetsModifier = "0"
+				targetRadiusMultiplier = "1.3"
+				hitSplashMultiplier = "1"
+				hitPhysicalMultiplier = "1"
+				splashRadiusModifier = "0"
+				statusEffectChanceMultiplier = "1"
+				statusEffectDurationModifier = "0"
+				coldConversionRate = "0"
+				fireConversionRate = "0"
+				earthConversionRate = "0"
+				baseStatusEffectChance = "0"
+				>
+			</modifierProperties>
+			<duration>12</duration>
+		</modifier>		
+		
+		<modifier itemID = "OFFER-1-11" itemName = "Pearl teardrop" itemCost = "0" spriteName = "" >
+			<modifierProperties
+				clipSizeModifier = "0"
+				clipDelayTimeModifier = "0"
+				reloadRateModifier = "0"
+				numberOfTargetsModifier = "0"
+				targetRadiusMultiplier = "1"
+				hitSplashMultiplier = "1"
+				hitPhysicalMultiplier = "1.2"
+				splashRadiusModifier = "0"
+				statusEffectChanceMultiplier = "1"
+				statusEffectDurationModifier = "0"
+				coldConversionRate = "0"
+				fireConversionRate = "0"
+				earthConversionRate = "0"
+				baseStatusEffectChance = "0"
+				>
+			</modifierProperties>
+			<duration>12</duration>	
+		</modifier>		
+			
 		<modifier itemID = "OFFER-1-12" itemName = "Lost jewel" itemCost = "0" spriteName = "" >
 			<modifierProperties
 				clipSizeModifier = "0"
@@ -22,6 +253,447 @@
 			<duration>8</duration>
 		</modifier>
 		
+		<modifier itemID = "OFFER-1-13" itemName = "Radiant blossom" itemCost = "0" spriteName = "" >
+			<modifierProperties
+				clipSizeModifier = "0"
+				clipDelayTimeModifier = "0"
+				reloadRateModifier = "0"
+				numberOfTargetsModifier = "0"
+				targetRadiusMultiplier = "1.5"
+				hitSplashMultiplier = "1"
+				hitPhysicalMultiplier = "1"
+				splashRadiusModifier = "0"
+				statusEffectChanceMultiplier = "1"
+				statusEffectDurationModifier = "0"
+				coldConversionRate = "0"
+				fireConversionRate = "0"
+				earthConversionRate = "0"
+				baseStatusEffectChance = "0"
+				>
+			</modifierProperties>
+			<duration>12</duration>
+		</modifier>		
+					
+		<modifier itemID = "OFFER-2-01" itemName = "Ashpile" itemCost = "0" spriteName = "" >
+			<modifierProperties
+				clipSizeModifier = "0"
+				clipDelayTimeModifier = "0"
+				reloadRateModifier = "0"
+				numberOfTargetsModifier = "0"
+				targetRadiusMultiplier = "1"
+				hitSplashMultiplier = "1"
+				hitPhysicalMultiplier = "0.9"
+				splashRadiusModifier = "0"
+				statusEffectChanceMultiplier = "1"
+				statusEffectDurationModifier = "0"
+				coldConversionRate = "0"
+				fireConversionRate = "0"
+				earthConversionRate = "0"
+				baseStatusEffectChance = "0"
+				>
+			</modifierProperties>
+			<duration>10</duration>	
+		</modifier>		
+					
+		<modifier itemID = "OFFER-2-02" itemName = "Rotten bone" itemCost = "0" spriteName = "" >
+			<modifierProperties
+				clipSizeModifier = "0"
+				clipDelayTimeModifier = "0"
+				reloadRateModifier = "0.05"
+				numberOfTargetsModifier = "0"
+				targetRadiusMultiplier = "1"
+				hitSplashMultiplier = "1"
+				hitPhysicalMultiplier = "1"
+				splashRadiusModifier = "0"
+				statusEffectChanceMultiplier = "1"
+				statusEffectDurationModifier = "0"
+				coldConversionRate = "0"
+				fireConversionRate = "0"
+				earthConversionRate = "0"
+				baseStatusEffectChance = "0"
+				>
+			</modifierProperties>
+			<duration>10</duration>	
+		</modifier>		
+					
+		<modifier itemID = "OFFER-2-03" itemName = "Evil flower" itemCost = "0" spriteName = "" >
+			<modifierProperties
+				clipSizeModifier = "0"
+				clipDelayTimeModifier = "0"
+				reloadRateModifier = "0"
+				numberOfTargetsModifier = "0"
+				targetRadiusMultiplier = "0.8"
+				hitSplashMultiplier = "1"
+				hitPhysicalMultiplier = "1"
+				splashRadiusModifier = "0"
+				statusEffectChanceMultiplier = "1"
+				statusEffectDurationModifier = "0"
+				coldConversionRate = "0"
+				fireConversionRate = "0"
+				earthConversionRate = "0"
+				baseStatusEffectChance = "0"
+				>
+			</modifierProperties>
+			<duration>10</duration>	
+		</modifier>		
+					
+		<modifier itemID = "OFFER-2-04" itemName = "Cursed doll" itemCost = "0" spriteName = "" >
+			<modifierProperties
+				clipSizeModifier = "0"
+				clipDelayTimeModifier = "0"
+				reloadRateModifier = "0"
+				numberOfTargetsModifier = "0"
+				targetRadiusMultiplier = "1"
+				hitSplashMultiplier = "0.75"
+				hitPhysicalMultiplier = "1"
+				splashRadiusModifier = "-0.2"
+				statusEffectChanceMultiplier = "1"
+				statusEffectDurationModifier = "0"
+				coldConversionRate = "0"
+				fireConversionRate = "0"
+				earthConversionRate = "0"
+				baseStatusEffectChance = "0"
+				>
+			</modifierProperties>
+			<duration>10</duration>	
+		</modifier>		
+					
+		<modifier itemID = "OFFER-2-05" itemName = "Broken mirror" itemCost = "0" spriteName = "" >
+			<modifierProperties
+				clipSizeModifier = "0"
+				clipDelayTimeModifier = "0"
+				reloadRateModifier = "0.2"
+				numberOfTargetsModifier = "0"
+				targetRadiusMultiplier = "1"
+				hitSplashMultiplier = "1"
+				hitPhysicalMultiplier = "1"
+				splashRadiusModifier = "0"
+				statusEffectChanceMultiplier = "1"
+				statusEffectDurationModifier = "0"
+				coldConversionRate = "0"
+				fireConversionRate = "0"
+				earthConversionRate = "0"
+				baseStatusEffectChance = "0"
+				>
+			</modifierProperties>
+			<duration>8</duration>	
+		</modifier>		
+					
+		<modifier itemID = "OFFER-2-06" itemName = "Ominous stone" itemCost = "0" spriteName = "" >
+			<modifierProperties
+				clipSizeModifier = "0"
+				clipDelayTimeModifier = "0"
+				reloadRateModifier = "0"
+				numberOfTargetsModifier = "0"
+				targetRadiusMultiplier = "1"
+				hitSplashMultiplier = "1"
+				hitPhysicalMultiplier = "0.75"
+				splashRadiusModifier = "0"
+				statusEffectChanceMultiplier = "1"
+				statusEffectDurationModifier = "0"
+				coldConversionRate = "0"
+				fireConversionRate = "0"
+				earthConversionRate = "0"
+				baseStatusEffectChance = "0"
+				>
+			</modifierProperties>
+			<duration>15</duration>
+		</modifier>		
+		
+		<modifier itemID = "OFFER-3-01" itemName = "Shimmering dust" itemCost = "0" spriteName = "" >
+			<modifierProperties
+				clipSizeModifier = "0"
+				clipDelayTimeModifier = "0"
+				reloadRateModifier = "0.2"
+				numberOfTargetsModifier = "0"
+				targetRadiusMultiplier = "1"
+				hitSplashMultiplier = "1"
+				hitPhysicalMultiplier = "1.5"
+				splashRadiusModifier = "0"
+				statusEffectChanceMultiplier = "1"
+				statusEffectDurationModifier = "0"
+				coldConversionRate = "0"
+				fireConversionRate = "0"
+				earthConversionRate = "0"
+				baseStatusEffectChance = "0"
+				>
+			</modifierProperties>
+			<duration>8</duration>	
+		</modifier>		
+					
+		<modifier itemID = "OFFER-3-02" itemName = "Spectral feather" itemCost = "0" spriteName = "" >
+			<modifierProperties
+				clipSizeModifier = "1"
+				clipDelayTimeModifier = "0"
+				reloadRateModifier = "0"
+				numberOfTargetsModifier = "0"
+				targetRadiusMultiplier = "0.9"
+				hitSplashMultiplier = "1"
+				hitPhysicalMultiplier = "1"
+				splashRadiusModifier = "0"
+				statusEffectChanceMultiplier = "1"
+				statusEffectDurationModifier = "0"
+				coldConversionRate = "0"
+				fireConversionRate = "0"
+				earthConversionRate = "0"
+				baseStatusEffectChance = "0"
+				>
+			</modifierProperties>
+			<duration>8</duration>	
+		</modifier>		
+					
+		<modifier itemID = "OFFER-3-03" itemName = "Mysterious foam" itemCost = "0" spriteName = "" >
+			<modifierProperties
+				clipSizeModifier = "0"
+				clipDelayTimeModifier = "0"
+				reloadRateModifier = "0"
+				numberOfTargetsModifier = "1"
+				targetRadiusMultiplier = "0.9"
+				hitSplashMultiplier = "1"
+				hitPhysicalMultiplier = "1"
+				splashRadiusModifier = "0"
+				statusEffectChanceMultiplier = "1"
+				statusEffectDurationModifier = "0"
+				coldConversionRate = "0"
+				fireConversionRate = "0"
+				earthConversionRate = "0"
+				baseStatusEffectChance = "0"
+				>
+			</modifierProperties>
+			<duration>8</duration>	
+		</modifier>		
+					
+		<modifier itemID = "OFFER-3-04" itemName = "Aromatic nectar" itemCost = "0" spriteName = "" >
+			<modifierProperties
+				clipSizeModifier = "0"
+				clipDelayTimeModifier = "0"
+				reloadRateModifier = "-0.2"
+				numberOfTargetsModifier = "0"
+				targetRadiusMultiplier = "1"
+				hitSplashMultiplier = "1"
+				hitPhysicalMultiplier = "0.9"
+				splashRadiusModifier = "0"
+				statusEffectChanceMultiplier = "1"
+				statusEffectDurationModifier = "0"
+				coldConversionRate = "0"
+				fireConversionRate = "0"
+				earthConversionRate = "0"
+				baseStatusEffectChance = "0"
+				>
+			</modifierProperties>
+			<duration>8</duration>	
+		</modifier>		
+					
+		<modifier itemID = "OFFER-3-05" itemName = "Moonlight crystal" itemCost = "0" spriteName = "" >
+			<modifierProperties
+				clipSizeModifier = "0"
+				clipDelayTimeModifier = "0"
+				reloadRateModifier = "0"
+				numberOfTargetsModifier = "0"
+				targetRadiusMultiplier = "2"
+				hitSplashMultiplier = "1"
+				hitPhysicalMultiplier = "1"
+				splashRadiusModifier = "-0.2"
+				statusEffectChanceMultiplier = "1"
+				statusEffectDurationModifier = "0"
+				coldConversionRate = "0"
+				fireConversionRate = "0"
+				earthConversionRate = "0"
+				baseStatusEffectChance = "0"
+				>
+			</modifierProperties>
+			<duration>8</duration>	
+		</modifier>		
+					
+		<modifier itemID = "OFFER-3-06" itemName = "Mystical orb" itemCost = "0" spriteName = "" >
+			<modifierProperties
+				clipSizeModifier = "0"
+				clipDelayTimeModifier = "0"
+				reloadRateModifier = "0"
+				numberOfTargetsModifier = "2"
+				targetRadiusMultiplier = "1"
+				hitSplashMultiplier = "1"
+				hitPhysicalMultiplier = "0.8"
+				splashRadiusModifier = "0"
+				statusEffectChanceMultiplier = "1"
+				statusEffectDurationModifier = "0"
+				coldConversionRate = "0"
+				fireConversionRate = "0"
+				earthConversionRate = "0"
+				baseStatusEffectChance = "0"
+				>
+			</modifierProperties>
+			<duration>10</duration>	
+		</modifier>		
+					
+		<modifier itemID = "OFFER-3-07" itemName = "Iridescent mist" itemCost = "0" spriteName = "" >
+			<modifierProperties
+				clipSizeModifier = "2"
+				clipDelayTimeModifier = "0"
+				reloadRateModifier = "0"
+				numberOfTargetsModifier = "0"
+				targetRadiusMultiplier = "1"
+				hitSplashMultiplier = "1"
+				hitPhysicalMultiplier = "0.8"
+				splashRadiusModifier = "0"
+				statusEffectChanceMultiplier = "1"
+				statusEffectDurationModifier = "0"
+				coldConversionRate = "0"
+				fireConversionRate = "0"
+				earthConversionRate = "0"
+				baseStatusEffectChance = "0"
+				>
+			</modifierProperties>
+			<duration>10</duration>	
+		</modifier>		
+					
+		<modifier itemID = "OFFER-3-08" itemName = "Fairy's wish" itemCost = "0" spriteName = "" >
+			<modifierProperties
+				clipSizeModifier = "0"
+				clipDelayTimeModifier = "0"
+				reloadRateModifier = "0"
+				numberOfTargetsModifier = "0"
+				targetRadiusMultiplier = "1"
+				hitSplashMultiplier = "1"
+				hitPhysicalMultiplier = "2"
+				splashRadiusModifier = "0"
+				statusEffectChanceMultiplier = "1"
+				statusEffectDurationModifier = "0"
+				coldConversionRate = "0"
+				fireConversionRate = "0"
+				earthConversionRate = "0"
+				baseStatusEffectChance = "0"
+				>
+			</modifierProperties>
+			<duration>5</duration>
+		</modifier>		
+		
+		<modifier itemID = "OFFER-3-09" itemName = "Angel's song" itemCost = "0" spriteName = "" >
+			<modifierProperties
+				clipSizeModifier = "0"
+				clipDelayTimeModifier = "0"
+				reloadRateModifier = "0"
+				numberOfTargetsModifier = "0"
+				targetRadiusMultiplier = "1"
+				hitSplashMultiplier = "3"
+				hitPhysicalMultiplier = "1"
+				splashRadiusModifier = "1"
+				statusEffectChanceMultiplier = "1"
+				statusEffectDurationModifier = "0"
+				coldConversionRate = "0"
+				fireConversionRate = "0"
+				earthConversionRate = "0"
+				baseStatusEffectChance = "0"
+				>
+			</modifierProperties>
+			<duration>5</duration>	
+		</modifier>		
+		
+		<modifier itemID = "OFFER-3-10" itemName = "Morning's breath" itemCost = "0" spriteName = "" >
+			<modifierProperties
+				clipSizeModifier = "2"
+				clipDelayTimeModifier = "0"
+				reloadRateModifier = "0"
+				numberOfTargetsModifier = "2"
+				targetRadiusMultiplier = "1"
+				hitSplashMultiplier = "1"
+				hitPhysicalMultiplier = "1"
+				splashRadiusModifier = "0"
+				statusEffectChanceMultiplier = "1"
+				statusEffectDurationModifier = "0"
+				coldConversionRate = "0"
+				fireConversionRate = "0"
+				earthConversionRate = "0"
+				baseStatusEffectChance = "0"
+				>
+			</modifierProperties>
+			<duration>5</duration>	
+		</modifier>		
+				
+		<modifier itemID = "OFFER-4-01" itemName = "Mushroom" itemCost = "0" spriteName = "" >
+			<modifierProperties
+				clipSizeModifier = "0"
+				clipDelayTimeModifier = "0"
+				reloadRateModifier = "0"
+				numberOfTargetsModifier = "0"
+				targetRadiusMultiplier = "1"
+				hitSplashMultiplier = "1"
+				hitPhysicalMultiplier = "1"
+				splashRadiusModifier = "0"
+				statusEffectChanceMultiplier = "1"
+				statusEffectDurationModifier = "0.5"
+				coldConversionRate = "0"
+				fireConversionRate = "0"
+				earthConversionRate = "0.2"
+				baseStatusEffectChance = "0.1"
+				>
+			</modifierProperties>
+			<duration>10</duration>	
+		</modifier>
+
+		<modifier itemID = "OFFER-4-02" itemName = "Ivy leaf" itemCost = "0" spriteName = "" >
+			<modifierProperties
+				clipSizeModifier = "0"
+				clipDelayTimeModifier = "0"
+				reloadRateModifier = "0"
+				numberOfTargetsModifier = "0"
+				targetRadiusMultiplier = "1"
+				hitSplashMultiplier = "1"
+				hitPhysicalMultiplier = "1"
+				splashRadiusModifier = "0"
+				statusEffectChanceMultiplier = "1"
+				statusEffectDurationModifier = "0"
+				coldConversionRate = "0"
+				fireConversionRate = "0"
+				earthConversionRate = "0.3"
+				baseStatusEffectChance = "0.1"
+				>
+			</modifierProperties>
+			<duration>10</duration>	
+		</modifier>		
+		
+		<modifier itemID = "OFFER-4-03" itemName = "Corrosive berry" itemCost = "0" spriteName = "" >
+			<modifierProperties
+				clipSizeModifier = "0"
+				clipDelayTimeModifier = "0"
+				reloadRateModifier = "0"
+				numberOfTargetsModifier = "0"
+				targetRadiusMultiplier = "1"
+				hitSplashMultiplier = "1"
+				hitPhysicalMultiplier = "1"
+				splashRadiusModifier = "0"
+				statusEffectChanceMultiplier = "1"
+				statusEffectDurationModifier = "0"
+				coldConversionRate = "0"
+				fireConversionRate = "0"
+				earthConversionRate = "0.6"
+				baseStatusEffectChance = "0.25"
+				>
+			</modifierProperties>
+			<duration>10</duration>	
+		</modifier>
+
+		<modifier itemID = "OFFER-4-04" itemName = "Blightthorn cutting" itemCost = "0" spriteName = "" >
+			<modifierProperties
+				clipSizeModifier = "0"
+				clipDelayTimeModifier = "0"
+				reloadRateModifier = "0"
+				numberOfTargetsModifier = "0"
+				targetRadiusMultiplier = "1"
+				hitSplashMultiplier = "1"
+				hitPhysicalMultiplier = "1"
+				splashRadiusModifier = "0"
+				statusEffectChanceMultiplier = "1"
+				statusEffectDurationModifier = "0.5"
+				coldConversionRate = "0"
+				fireConversionRate = "0"
+				earthConversionRate = "0.5"
+				baseStatusEffectChance = "0.25"
+				>
+			</modifierProperties>
+			<duration>10</duration>	
+		</modifier>	
+
 		<modifier itemID = "OFFER-4-05" itemName = "Death's shroud" itemCost = "0" spriteName = "" >
 			<modifierProperties
 				clipSizeModifier = "0"
@@ -40,8 +712,218 @@
 				baseStatusEffectChance = "0.4"
 				>
 			</modifierProperties>
-			<duration>10</duration>
+			<duration>10</duration>	
+		</modifier>		
+		
+		<modifier itemID = "OFFER-5-01" itemName = "Pristine snowflake" itemCost = "0" spriteName = "" >
+			<modifierProperties
+				clipSizeModifier = "0"
+				clipDelayTimeModifier = "0"
+				reloadRateModifier = "0"
+				numberOfTargetsModifier = "0"
+				targetRadiusMultiplier = "1"
+				hitSplashMultiplier = "1"
+				hitPhysicalMultiplier = "1"
+				splashRadiusModifier = "0"
+				statusEffectChanceMultiplier = "1"
+				statusEffectDurationModifier = "0.5"
+				coldConversionRate = "0.2"
+				fireConversionRate = "0"
+				earthConversionRate = "0"
+				baseStatusEffectChance = "0.1"
+				>
+			</modifierProperties>
+			<duration>10</duration>	
 		</modifier>
+
+		<modifier itemID = "OFFER-5-02" itemName = "Clear icicle" itemCost = "0" spriteName = "" >
+			<modifierProperties
+				clipSizeModifier = "0"
+				clipDelayTimeModifier = "0"
+				reloadRateModifier = "0"
+				numberOfTargetsModifier = "0"
+				targetRadiusMultiplier = "1"
+				hitSplashMultiplier = "1"
+				hitPhysicalMultiplier = "1"
+				splashRadiusModifier = "0"
+				statusEffectChanceMultiplier = "1"
+				statusEffectDurationModifier = "0"
+				coldConversionRate = "0.3"
+				fireConversionRate = "0"
+				earthConversionRate = "0"
+				baseStatusEffectChance = "0.1"
+				>
+			</modifierProperties>
+			<duration>10</duration>	
+		</modifier>		
+		
+		<modifier itemID = "OFFER-5-03" itemName = "Glacier fragment" itemCost = "0" spriteName = "" >
+			<modifierProperties
+				clipSizeModifier = "0"
+				clipDelayTimeModifier = "0"
+				reloadRateModifier = "0"
+				numberOfTargetsModifier = "0"
+				targetRadiusMultiplier = "1"
+				hitSplashMultiplier = "1"
+				hitPhysicalMultiplier = "1"
+				splashRadiusModifier = "0"
+				statusEffectChanceMultiplier = "1"
+				statusEffectDurationModifier = "0"
+				coldConversionRate = "0.6"
+				fireConversionRate = "0"
+				earthConversionRate = "0"
+				baseStatusEffectChance = "0.25"
+				>
+			</modifierProperties>
+			<duration>10</duration>	
+		</modifier>
+
+		<modifier itemID = "OFFER-5-04" itemName = "Frost's chill" itemCost = "0" spriteName = "" >
+			<modifierProperties
+				clipSizeModifier = "0"
+				clipDelayTimeModifier = "0"
+				reloadRateModifier = "0"
+				numberOfTargetsModifier = "0"
+				targetRadiusMultiplier = "1"
+				hitSplashMultiplier = "1"
+				hitPhysicalMultiplier = "1"
+				splashRadiusModifier = "0"
+				statusEffectChanceMultiplier = "1"
+				statusEffectDurationModifier = "0.5"
+				coldConversionRate = "0.5"
+				fireConversionRate = "0"
+				earthConversionRate = "0"
+				baseStatusEffectChance = "0.25"
+				>
+			</modifierProperties>
+			<duration>10</duration>	
+		</modifier>	
+
+		<modifier itemID = "OFFER-5-05" itemName = "Blizzard's touch" itemCost = "0" spriteName = "" >
+			<modifierProperties
+				clipSizeModifier = "0"
+				clipDelayTimeModifier = "0"
+				reloadRateModifier = "0"
+				numberOfTargetsModifier = "0"
+				targetRadiusMultiplier = "1"
+				hitSplashMultiplier = "1"
+				hitPhysicalMultiplier = "1"
+				splashRadiusModifier = "0"
+				statusEffectChanceMultiplier = "1"
+				statusEffectDurationModifier = "0"
+				coldConversionRate = "1"
+				fireConversionRate = "0"
+				earthConversionRate = "0"
+				baseStatusEffectChance = "0.4"
+				>
+			</modifierProperties>
+			<duration>10</duration>	
+		</modifier>	
+		
+		<modifier itemID = "OFFER-6-01" itemName = "Glowing ember" itemCost = "0" spriteName = "" >
+			<modifierProperties
+				clipSizeModifier = "0"
+				clipDelayTimeModifier = "0"
+				reloadRateModifier = "0"
+				numberOfTargetsModifier = "0"
+				targetRadiusMultiplier = "1"
+				hitSplashMultiplier = "1"
+				hitPhysicalMultiplier = "1"
+				splashRadiusModifier = "0"
+				statusEffectChanceMultiplier = "1"
+				statusEffectDurationModifier = "0.5"
+				coldConversionRate = "0"
+				fireConversionRate = "0.2"
+				earthConversionRate = "0"
+				baseStatusEffectChance = "0.1"
+				>
+			</modifierProperties>
+			<duration>10</duration>	
+		</modifier>
+
+		<modifier itemID = "OFFER-6-02" itemName = "Burnt cinder" itemCost = "0" spriteName = "" >
+			<modifierProperties
+				clipSizeModifier = "0"
+				clipDelayTimeModifier = "0"
+				reloadRateModifier = "0"
+				numberOfTargetsModifier = "0"
+				targetRadiusMultiplier = "1"
+				hitSplashMultiplier = "1"
+				hitPhysicalMultiplier = "1"
+				splashRadiusModifier = "0"
+				statusEffectChanceMultiplier = "1"
+				statusEffectDurationModifier = "0"
+				coldConversionRate = "0"
+				fireConversionRate = "0.3"
+				earthConversionRate = "0"
+				baseStatusEffectChance = "0.1"
+				>
+			</modifierProperties>
+			<duration>10</duration>	
+		</modifier>		
+		
+		<modifier itemID = "OFFER-6-03" itemName = "Flaming spark" itemCost = "0" spriteName = "" >
+			<modifierProperties
+				clipSizeModifier = "0"
+				clipDelayTimeModifier = "0"
+				reloadRateModifier = "0"
+				numberOfTargetsModifier = "0"
+				targetRadiusMultiplier = "1"
+				hitSplashMultiplier = "1"
+				hitPhysicalMultiplier = "1"
+				splashRadiusModifier = "0"
+				statusEffectChanceMultiplier = "1"
+				statusEffectDurationModifier = "0"
+				coldConversionRate = "0"
+				fireConversionRate = "0.6"
+				earthConversionRate = "0"
+				baseStatusEffectChance = "0.25"
+				>
+			</modifierProperties>
+			<duration>10</duration>	
+		</modifier>
+
+		<modifier itemID = "OFFER-6-04" itemName = "Molten essence" itemCost = "0" spriteName = "" >
+			<modifierProperties
+				clipSizeModifier = "0"
+				clipDelayTimeModifier = "0"
+				reloadRateModifier = "0"
+				numberOfTargetsModifier = "0"
+				targetRadiusMultiplier = "1"
+				hitSplashMultiplier = "1"
+				hitPhysicalMultiplier = "1"
+				splashRadiusModifier = "0"
+				statusEffectChanceMultiplier = "1"
+				statusEffectDurationModifier = "0.5"
+				coldConversionRate = "0"
+				fireConversionRate = "0.5"
+				earthConversionRate = "0"
+				baseStatusEffectChance = "0.25"
+				>
+			</modifierProperties>
+			<duration>10</duration>	
+		</modifier>	
+
+		<modifier itemID = "OFFER-6-05" itemName = "Flame's wrath" itemCost = "0" spriteName = "" >
+			<modifierProperties
+				clipSizeModifier = "0"
+				clipDelayTimeModifier = "0"
+				reloadRateModifier = "0"
+				numberOfTargetsModifier = "0"
+				targetRadiusMultiplier = "1"
+				hitSplashMultiplier = "1"
+				hitPhysicalMultiplier = "1"
+				splashRadiusModifier = "0"
+				statusEffectChanceMultiplier = "1"
+				statusEffectDurationModifier = "0"
+				coldConversionRate = "0"
+				fireConversionRate = "1"
+				earthConversionRate = "0"
+				baseStatusEffectChance = "0.4"
+				>
+			</modifierProperties>
+			<duration>10</duration>	
+		</modifier>	
 		
 	</modifierList>
 </towerModifiers>

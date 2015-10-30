@@ -7,8 +7,6 @@ public class RuneListItem : ListItem {
 
     public override void performDropActionOnTarget(RaycastHit hit)
     {
-        LevelController.Instance.town.TakeHit(modifierObject.itemCost);
-
         Tower tower = hit.collider.GetComponentInParent<Tower>();
 
         Debug.Log("Hit Something");
@@ -16,6 +14,7 @@ public class RuneListItem : ListItem {
         if (tower != null)
         {
             tower.AddRune(modifierObject as Gem);
+            LevelController.Instance.town.TakeHit(modifierObject.itemCost);
             Debug.Log("Hit TOWER!");
         }
     }

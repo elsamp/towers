@@ -6,7 +6,7 @@ public class RoundController : MonoBehaviour {
 	public Round[] rounds;
 
 	private int nextRoundIndex = 0;
-	private float roundStartTime;
+	private float nextRoundStartTime;
 
 	private static RoundController instance;
 	
@@ -19,28 +19,31 @@ public class RoundController : MonoBehaviour {
 		
 		if(instance == null){
 			instance = this;
-			roundStartTime = Time.time;
+            nextRoundStartTime = Time.time;
 		}
 	}
 
 	// Update is called once per frame
 	void LateUpdate () {
 
-		if((nextRoundIndex < rounds.Length) && (nextRoundIndex <=0 || !rounds[nextRoundIndex -1].isActive)){
-			if(Time.time > roundStartTime){
-				StartNextRound();
-			}
+		if((nextRoundIndex < rounds.Length) && (Time.time > nextRoundStartTime))
+        {
+            StartNextRound();
 		}
 	}
 
-	public void SetNextRoundStartTime(float startTime){
-		roundStartTime = startTime;
+	public void SetNextRoundStartTime(){
+
+        if ((nextRoundIndex < rounds.Length)){
+            nextRoundStartTime = Time.time + rounds[nextRoundIndex].startDelayTime;
+        } 
 	}
 
 	public void StartNextRound(){
 		rounds[nextRoundIndex].isActive = true;
 		nextRoundIndex++;
-	}
+        SetNextRoundStartTime();
+    }
 
 	public void StopCurrentRound(){
 		rounds[nextRoundIndex -1].isActive = false;

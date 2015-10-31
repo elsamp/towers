@@ -37,6 +37,13 @@ public class Enemy : MonoBehaviour {
     private GameObject coldStatusEffect;
     private GameObject earthStatusEffect;
 
+    private EnemyPath path;
+
+    public EnemyPath Path
+    {
+        set { path = value; }
+    }
+
 
     // Use this for initialization
     void Start () {
@@ -91,7 +98,7 @@ public class Enemy : MonoBehaviour {
 
 	public void UpdateDestination(){
 
-		destinationNode = EnemyPath.Instance.getNextNode(pathNodeIndex);
+		destinationNode = path.getNextNode(pathNodeIndex);
 
 		if(destinationNode == null)
 		{
@@ -100,7 +107,15 @@ public class Enemy : MonoBehaviour {
 			return;
 		}
 
-		destination = destinationNode.transform.position;
+        float randomX = Random.Range(0.0f, 0.2f);
+        float randomZ = Random.Range(0.0f, 0.2f);
+
+        Vector3 pos = destinationNode.transform.position;
+
+        pos.x += randomX;
+        pos.z += randomZ;
+
+        destination = pos;
 		pathNodeIndex++;
 
 	}

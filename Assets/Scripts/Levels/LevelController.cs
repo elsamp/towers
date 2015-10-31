@@ -22,9 +22,7 @@ public class LevelController : MonoBehaviour {
 			instance = this;
 		}
 		
-		FindObjectOfType<EnemyPath>().Init();
 		FindObjectOfType<RoundController>().Init();
-		FindObjectOfType<GemSelector>().Init();
 	}
 
 	public void SpendReputation(float amount){

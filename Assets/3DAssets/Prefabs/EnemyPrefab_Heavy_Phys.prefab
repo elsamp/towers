@@ -331,7 +331,7 @@ MonoBehaviour:
   enemyId: ENEMY-03-02
   maxLife: 60
   currentLife: 0
-  speed: 5
+  speed: 6
   fireResist: -.300000012
   coldResist: -.300000012
   earthResist: -.300000012
@@ -449,7 +449,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: speed
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: enemyId

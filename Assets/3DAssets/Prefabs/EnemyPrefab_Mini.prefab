@@ -329,9 +329,9 @@ MonoBehaviour:
   lifeBar: {fileID: 11400002}
   body: {fileID: 100004}
   enemyId: ENEMY-02-01
-  maxLife: 15
+  maxLife: 8
   currentLife: 0
-  speed: 8
+  speed: 12
   fireResist: 0
   coldResist: 0
   earthResist: 0
@@ -425,11 +425,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 0}
       propertyPath: maxLife
-      value: 15
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: speed
-      value: 8
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: killRewardAmount

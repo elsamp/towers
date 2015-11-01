@@ -23,7 +23,8 @@ public class LevelController : MonoBehaviour {
 		}
 		
 		FindObjectOfType<RoundController>().Init();
-	}
+        FindObjectOfType<EnemyDropManager>().Init();
+    }
 
 	public void SpendReputation(float amount){
 		town.TakeHit(amount);

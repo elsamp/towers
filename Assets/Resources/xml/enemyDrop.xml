@@ -1,0 +1,7 @@
+<dropTable>
+	<enemyDrops>
+		<enemyDropList enemyId = "">
+			<item itemid = "" dropChance = "0.2"></item>
+		</enemyDropList>
+	</enemyDrops>
+</dropTable>

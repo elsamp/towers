@@ -1,10 +1,13 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 public class Enemy : MonoBehaviour {
 
 	public LifeBar lifeBar;
 	public GameObject body;
+
+    public string enemyId;
 
 	public float maxLife;
 	public float currentLife;
@@ -351,6 +354,13 @@ public class Enemy : MonoBehaviour {
 
 	private void Die(){
 		LevelController.Instance.EnemyKilled(this);
+        DropItem();
 		Destroy(this.gameObject);
 	}
+
+    private void DropItem()
+    {
+        Debug.Log("Dropping Item");
+        List<Item> potentialDrops = EnemyDropManager.Instance.GetEnemyDropsForRegion(enemyId);
+    }
 }

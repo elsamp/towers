@@ -328,6 +328,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lifeBar: {fileID: 11400002}
   body: {fileID: 100004}
+  enemyId: ENEMY-01-01
   maxLife: 35
   currentLife: 0
   speed: 5
@@ -445,6 +446,10 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: killRewardAmount
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: enemyId
+      value: ENEMY-01-01
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}

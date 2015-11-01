@@ -328,6 +328,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lifeBar: {fileID: 11400002}
   body: {fileID: 100006}
+  enemyId: ENEMY-03-02
   maxLife: 80
   currentLife: 0
   speed: 2.5
@@ -336,7 +337,7 @@ MonoBehaviour:
   earthResist: -.300000012
   physicalResist: .75
   allResist: 0
-  killRewardAmount: 12
+  killRewardAmount: 7
   townDamageAmount: 25
 --- !u!114 &11400002
 MonoBehaviour:
@@ -424,7 +425,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 0}
       propertyPath: killRewardAmount
-      value: 12
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: townDamageAmount
@@ -449,6 +450,10 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: speed
       value: 2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: enemyId
+      value: ENEMY-03-02
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}

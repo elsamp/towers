@@ -329,9 +329,9 @@ MonoBehaviour:
   lifeBar: {fileID: 11400002}
   body: {fileID: 100006}
   enemyId: ENEMY-03-05
-  maxLife: 70
+  maxLife: 60
   currentLife: 0
-  speed: 3
+  speed: 6
   fireResist: -.600000024
   coldResist: .75
   earthResist: -.100000001
@@ -425,7 +425,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 0}
       propertyPath: maxLife
-      value: 70
+      value: 60
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: fireResist
@@ -454,6 +454,10 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: enemyId
       value: ENEMY-03-05
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: speed
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}

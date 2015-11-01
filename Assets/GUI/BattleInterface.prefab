@@ -10,6 +10,7 @@ GameObject:
   - 224: {fileID: 22453022}
   - 222: {fileID: 22253994}
   - 114: {fileID: 11404354}
+  - 114: {fileID: 11493552}
   m_Layer: 5
   m_Name: FavourCounter_Panel
   m_TagString: Untagged
@@ -3740,6 +3741,18 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &11493552
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100394}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78c3877ebfeae86418d8d35db5ef5f8d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  counterLabel: {fileID: 11407520}
 --- !u!114 &11493870
 MonoBehaviour:
   m_ObjectHideFlags: 1

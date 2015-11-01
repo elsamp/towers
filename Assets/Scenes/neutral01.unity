@@ -207,10 +207,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyPrefab: {fileID: 11400000, guid: 67782073ed94ebd48b6c8bf15869b432, type: 2}
   squadProximity: .400000006
+  favourReward: 2
   squadCount: 4
   startDelayTime: 7
   roundPath: {fileID: 1671367679}
   isActive: 0
+--- !u!114 &189684420 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 11493552, guid: c9b83a9d0a57dc64db785c773356ceb6,
+    type: 2}
+  m_PrefabInternal: {fileID: 386356026}
+  m_Script: {fileID: 11500000, guid: 78c3877ebfeae86418d8d35db5ef5f8d, type: 3}
 --- !u!1 &249852321
 GameObject:
   m_ObjectHideFlags: 0
@@ -252,6 +259,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyPrefab: {fileID: 11400000, guid: e8a08e70a788e4b4589d4648f93f6823, type: 2}
   squadProximity: 4
+  favourReward: 8
   squadCount: 2
   startDelayTime: 9
   roundPath: {fileID: 1671367679}
@@ -375,6 +383,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyPrefab: {fileID: 11400000, guid: 67782073ed94ebd48b6c8bf15869b432, type: 2}
   squadProximity: .800000012
+  favourReward: 5
   squadCount: 10
   startDelayTime: 4
   roundPath: {fileID: 1671367679}
@@ -626,6 +635,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyPrefab: {fileID: 11400000, guid: 67782073ed94ebd48b6c8bf15869b432, type: 2}
   squadProximity: 1
+  favourReward: 4
   squadCount: 7
   startDelayTime: 8
   roundPath: {fileID: 1671367679}
@@ -1344,6 +1354,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyPrefab: {fileID: 11400000, guid: 773be1e5efe0be4478333c8846531435, type: 2}
   squadProximity: 2
+  favourReward: 9
   squadCount: 3
   startDelayTime: 12
   roundPath: {fileID: 1671367679}
@@ -1449,6 +1460,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyPrefab: {fileID: 11400000, guid: e8a08e70a788e4b4589d4648f93f6823, type: 2}
   squadProximity: 2
+  favourReward: 6
   squadCount: 3
   startDelayTime: 15
   roundPath: {fileID: 1671367679}
@@ -1868,6 +1880,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyPrefab: {fileID: 11400000, guid: e8a08e70a788e4b4589d4648f93f6823, type: 2}
   squadProximity: 2
+  favourReward: 24
   squadCount: 12
   startDelayTime: 45
   roundPath: {fileID: 1671367679}
@@ -1952,8 +1965,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyPrefab: {fileID: 11400000, guid: e8a08e70a788e4b4589d4648f93f6823, type: 2}
   squadProximity: 4
+  favourReward: 20
   squadCount: 10
-  startDelayTime: 0
+  startDelayTime: 20
   roundPath: {fileID: 1671367679}
   isActive: 0
 --- !u!1 &1109666455
@@ -2036,6 +2050,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyPrefab: {fileID: 11400000, guid: 773be1e5efe0be4478333c8846531435, type: 2}
   squadProximity: 5
+  favourReward: 9
   squadCount: 3
   startDelayTime: 5
   roundPath: {fileID: 1671367679}
@@ -2953,6 +2968,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyPrefab: {fileID: 11400000, guid: 67782073ed94ebd48b6c8bf15869b432, type: 2}
   squadProximity: .600000024
+  favourReward: 3
   squadCount: 6
   startDelayTime: 28
   roundPath: {fileID: 1671367679}
@@ -3086,7 +3102,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 42f6ddc7581d3d3489f13225877898dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  town: {fileID: 1914286214}
+  startingControl: 20
+  maxControl: 100
+  balanceBar: {fileID: 1376744451}
+  startingFavour: 60
+  favourGUI: {fileID: 189684420}
   earthStatusEffectPrefab: {fileID: 151306, guid: 6adbc23c10c076e4cb712844c26e1622,
     type: 2}
   coldStatusEffectPrefab: {fileID: 129684, guid: 04cc3ef27d5be0d46bf3f8ea25d864ed,

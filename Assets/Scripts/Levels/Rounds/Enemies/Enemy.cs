@@ -112,7 +112,8 @@ public class Enemy : MonoBehaviour {
 		if(destinationNode == null)
 		{
 			LevelController.Instance.EnemyReachedTown(this);
-			Destroy(this.gameObject);
+            round.decreaseActiveEnemies();
+            Destroy(this.gameObject);
 			return;
 		}
 

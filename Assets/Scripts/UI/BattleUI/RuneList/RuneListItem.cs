@@ -13,9 +13,12 @@ public class RuneListItem : ListItem {
 
         if (tower != null)
         {
-            tower.AddRune(modifierObject as Gem);
-            LevelController.Instance.SpendFavour(modifierObject.itemCost);
-            Debug.Log("Hit TOWER!");
+            if (LevelController.Instance.SpendFavour(modifierObject.itemCost))
+            {
+                tower.AddRune(modifierObject as Gem);
+                Debug.Log("Hit TOWER! cost= " + modifierObject.itemCost);
+            }
+            
         }
     }
 

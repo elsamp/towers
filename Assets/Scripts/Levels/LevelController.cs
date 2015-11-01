@@ -40,7 +40,9 @@ public class LevelController : MonoBehaviour {
     }
 
 	public bool SpendFavour(int amount){
-		
+
+        Debug.Log("Amount = " + amount);
+
         if(currentFavour >= amount)
         {
             currentFavour -= amount;

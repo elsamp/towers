@@ -336,7 +336,7 @@ MonoBehaviour:
   earthResist: 0
   physicalResist: 0
   allResist: 0
-  killRewardAmount: 4
+  killRewardAmount: 2
   townDamageAmount: 15
 --- !u!114 &11400002
 MonoBehaviour:
@@ -444,7 +444,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: killRewardAmount
-      value: 4
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}

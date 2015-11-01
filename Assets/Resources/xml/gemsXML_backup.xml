@@ -1,0 +1,236 @@
+<towerModifiers>
+	<modifierList>
+	
+		<modifier itemID = "GEM-01" itemName = "Split Shot" itemCost = "5" spriteName = "" >
+			<modifierProperties
+				clipSizeModifier = "0"
+				clipDelayTimeModifier = "0"
+				reloadRateModifier = "0.1"
+				numberOfTargetsModifier = "1"
+				targetRadiusMultiplier = "1"
+				hitSplashMultiplier = "1"
+				hitPhysicalMultiplier = "0.9"
+				splashRadiusModifier = "0"
+				statusEffectChanceMultiplier = "1"
+				statusEffectDurationModifier = "0"
+				coldConversionRate = "0"
+				fireConversionRate = "0"
+				earthConversionRate = "0"
+				baseStatusEffectChance = "0"
+				>
+			</modifierProperties>
+			<duration>-1</duration>
+		</modifier>
+		
+		<modifier itemID = "GEM-02" itemName = "Rapid Fire" itemCost = "5" spriteName = "" >
+			<modifierProperties
+				clipSizeModifier = "1"
+				clipDelayTimeModifier = "-0.05"
+				reloadRateModifier = "0.1"
+				numberOfTargetsModifier = "0"
+				targetRadiusMultiplier = "0.95"
+				hitSplashMultiplier = "1"
+				hitPhysicalMultiplier = "0.9"
+				splashRadiusModifier = "0"
+				statusEffectChanceMultiplier = "1"
+				statusEffectDurationModifier = "0"
+				coldConversionRate = "0"
+				fireConversionRate = "0"
+				earthConversionRate = "0"
+				baseStatusEffectChance = "0"
+				>
+			</modifierProperties>
+			<duration>-1</duration>
+    </modifier>
+    
+		<modifier itemID = "GEM-03" itemName = "Splash Damage" itemCost = "5" spriteName = "" >
+			<modifierProperties
+				clipSizeModifier = "0"
+				clipDelayTimeModifier = "0"
+				reloadRateModifier = "-0.05"
+				numberOfTargetsModifier = "0"
+				targetRadiusMultiplier = "1"
+				hitSplashMultiplier = "2.5"
+				hitPhysicalMultiplier = "0.95"
+				splashRadiusModifier = "0"
+				statusEffectChanceMultiplier = "1"
+				statusEffectDurationModifier = "0"
+				coldConversionRate = "0"
+				fireConversionRate = "0"
+				earthConversionRate = "0"
+				baseStatusEffectChance = "0"
+				>
+			</modifierProperties>
+			<duration>-1</duration>
+    </modifier>
+    
+		<modifier itemID = "GEM-04" itemName = "Splash Radius" itemCost = "5" spriteName = "" >
+			<modifierProperties
+				clipSizeModifier = "0"
+				clipDelayTimeModifier = "0"
+				reloadRateModifier = "-0.05"
+				numberOfTargetsModifier = "0"
+				targetRadiusMultiplier = "1"
+				hitSplashMultiplier = "1"
+				hitPhysicalMultiplier = "0.95"
+				splashRadiusModifier = "0.6"
+				statusEffectChanceMultiplier = "1"
+				statusEffectDurationModifier = "0"
+				coldConversionRate = "0"
+				fireConversionRate = "0"
+				earthConversionRate = "0"
+				baseStatusEffectChance = "0"
+				>
+			</modifierProperties>
+			<duration>-1</duration>
+    </modifier>
+    
+		<modifier itemID = "GEM-05" itemName = "Faster Reload" itemCost = "5" spriteName = "" >
+			<modifierProperties
+				clipSizeModifier = "0"
+				clipDelayTimeModifier = "0"
+				reloadRateModifier = "-0.2"
+				numberOfTargetsModifier = "0"
+				targetRadiusMultiplier = "0.95"
+				hitSplashMultiplier = "1"
+				hitPhysicalMultiplier = "0.95"
+				splashRadiusModifier = "0"
+				statusEffectChanceMultiplier = "1"
+				statusEffectDurationModifier = "0"
+				coldConversionRate = "0"
+				fireConversionRate = "0"
+				earthConversionRate = "0"
+				baseStatusEffectChance = "0"
+				>
+			</modifierProperties>
+			<duration>-1</duration> 
+    </modifier>
+    
+		<modifier itemID = "GEM-06" itemName = "Increased Range" itemCost = "5" spriteName = "" >
+			<modifierProperties
+				clipSizeModifier = "0"
+				clipDelayTimeModifier = "0"
+				reloadRateModifier = "0"
+				numberOfTargetsModifier = "0"
+				targetRadiusMultiplier = "1.5"
+				hitSplashMultiplier = "1"
+				hitPhysicalMultiplier = "1"
+				splashRadiusModifier = "0"
+				statusEffectChanceMultiplier = "1"
+				statusEffectDurationModifier = "0"
+				coldConversionRate = "0"
+				fireConversionRate = "0"
+				earthConversionRate = "0"
+				baseStatusEffectChance = "0"
+				>
+			</modifierProperties>
+			<duration>-1</duration>
+    </modifier>
+    
+		<modifier itemID = "GEM-07" itemName = "Added Damage" itemCost = "5" spriteName = "" >
+			<modifierProperties
+				clipSizeModifier = "0"
+				clipDelayTimeModifier = "0"
+				reloadRateModifier = "0.05"
+				numberOfTargetsModifier = "0"
+				targetRadiusMultiplier = "0.95"
+				hitSplashMultiplier = "1"
+				hitPhysicalMultiplier = "1.25"
+				splashRadiusModifier = "0"
+				statusEffectChanceMultiplier = "1"
+				statusEffectDurationModifier = "0"
+				coldConversionRate = "0"
+				fireConversionRate = "0"
+				earthConversionRate = "0"
+				baseStatusEffectChance = "0"
+				>
+			</modifierProperties>
+			<duration>-1</duration>
+    </modifier>
+    
+		<modifier itemID = "GEM-08" itemName = "Concentrated Effect" itemCost = "5" spriteName = "" >
+			<modifierProperties
+				clipSizeModifier = "0"
+				clipDelayTimeModifier = "0"
+				reloadRateModifier = "0.2"
+				numberOfTargetsModifier = "0"
+				targetRadiusMultiplier = "0.95"
+				hitSplashMultiplier = "1"
+				hitPhysicalMultiplier = "1.4"
+				splashRadiusModifier = "-0.25"
+				statusEffectChanceMultiplier = "1"
+				statusEffectDurationModifier = "0"
+				coldConversionRate = "0"
+				fireConversionRate = "0"
+				earthConversionRate = "0"
+				baseStatusEffectChance = "0"
+				>
+			</modifierProperties>
+			<duration>-1</duration>
+    </modifier>
+    
+		<modifier itemID = "GEM-09" itemName = "Point Blank" itemCost = "5" spriteName = "" >
+			<modifierProperties
+				clipSizeModifier = "0"
+				clipDelayTimeModifier = "0"
+				reloadRateModifier = "0"
+				numberOfTargetsModifier = "0"
+				targetRadiusMultiplier = "0.75"
+				hitSplashMultiplier = "1"
+				hitPhysicalMultiplier = "1.45"
+				splashRadiusModifier = "0"
+				statusEffectChanceMultiplier = "1"
+				statusEffectDurationModifier = "0"
+				coldConversionRate = "0"
+				fireConversionRate = "0"
+				earthConversionRate = "0"
+				baseStatusEffectChance = "0"
+				>
+			</modifierProperties>
+			<duration>-1</duration>
+    </modifier>
+    
+		<modifier itemID = "GEM-10" itemName = "Elemental Duration" itemCost = "5" spriteName = "" >
+			<modifierProperties
+				clipSizeModifier = "0"
+				clipDelayTimeModifier = "0"
+				reloadRateModifier = "-0.05"
+				numberOfTargetsModifier = "0"
+				targetRadiusMultiplier = "1.05"
+				hitSplashMultiplier = "1"
+				hitPhysicalMultiplier = "1.05"
+				splashRadiusModifier = "0"
+				statusEffectChanceMultiplier = "1"
+				statusEffectDurationModifier = "0.8"
+				coldConversionRate = "0"
+				fireConversionRate = "0"
+				earthConversionRate = "0"
+				baseStatusEffectChance = "0"
+				>
+			</modifierProperties>
+			<duration>-1</duration>
+    </modifier>
+    
+		<modifier itemID = "GEM-11" itemName = "Elemental Chance" itemCost = "5" spriteName = "" >
+			<modifierProperties
+				clipSizeModifier = "0"
+				clipDelayTimeModifier = "0"
+				reloadRateModifier = "-0.05"
+				numberOfTargetsModifier = "0"
+				targetRadiusMultiplier = "1.05"
+				hitSplashMultiplier = "1"
+				hitPhysicalMultiplier = "1.05"
+				splashRadiusModifier = "0"
+				statusEffectChanceMultiplier = "1.3"
+				statusEffectDurationModifier = "0"
+				coldConversionRate = "0"
+				fireConversionRate = "0"
+				earthConversionRate = "0"
+				baseStatusEffectChance = "0"
+				>
+			</modifierProperties>
+			<duration>-1</duration>
+		</modifier>
+		
+	</modifierList>
+</towerModifiers>

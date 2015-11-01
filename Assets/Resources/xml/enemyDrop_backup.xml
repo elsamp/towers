@@ -1,0 +1,126 @@
+<dropTable>
+	<enemyDrops>
+		<enemyDropList enemyId = "ENEMY-01-01">
+			<item itemid = "OFFER-1-06" dropChance = "0.03"></item>
+			<item itemid = "OFFER-1-07" dropChance = "0.03"></item>
+			<item itemid = "OFFER-1-08" dropChance = "0.03"></item>
+			<item itemid = "OFFER-1-09" dropChance = "0.03"></item>
+			<item itemid = "OFFER-1-10" dropChance = "0.03"></item>
+			<item itemid = "OFFER-2-01" dropChance = "0.03"></item>
+			<item itemid = "OFFER-2-02" dropChance = "0.02"></item>
+		</enemyDropList>
+		<enemyDropList enemyId = "ENEMY-01-02">
+			<item itemid = "OFFER-1-11" dropChance = "0.04"></item>
+			<item itemid = "OFFER-1-12" dropChance = "0.04"></item>
+			<item itemid = "OFFER-1-13" dropChance = "0.04"></item>
+			<item itemid = "OFFER-3-01" dropChance = "0.04"></item>
+			<item itemid = "OFFER-3-02" dropChance = "0.04"></item>
+			<item itemid = "OFFER-3-03" dropChance = "0.04"></item>
+		</enemyDropList>
+		<enemyDropList enemyId = "ENEMY-01-03">
+			<item itemid = "OFFER-4-01" dropChance = "0.08"></item>
+			<item itemid = "OFFER-4-02" dropChance = "0.08"></item>
+			<item itemid = "OFFER-4-03" dropChance = "0.04"></item>
+			<item itemid = "OFFER-4-04" dropChance = "0.04"></item>
+		</enemyDropList>
+		<enemyDropList enemyId = "ENEMY-01-04">
+			<item itemid = "OFFER-6-01" dropChance = "0.08"></item>
+			<item itemid = "OFFER-6-02" dropChance = "0.08"></item>
+			<item itemid = "OFFER-6-03" dropChance = "0.04"></item>
+			<item itemid = "OFFER-6-04" dropChance = "0.04"></item>
+		</enemyDropList>
+		<enemyDropList enemyId = "ENEMY-01-05">
+			<item itemid = "OFFER-5-01" dropChance = "0.08"></item>
+			<item itemid = "OFFER-5-02" dropChance = "0.08"></item>
+			<item itemid = "OFFER-5-03" dropChance = "0.04"></item>
+			<item itemid = "OFFER-5-04" dropChance = "0.04"></item>
+		</enemyDropList>
+		<enemyDropList enemyId = "ENEMY-02-01">
+			<item itemid = "OFFER-1-01" dropChance = "0.02"></item>
+			<item itemid = "OFFER-1-02" dropChance = "0.02"></item>
+			<item itemid = "OFFER-1-03" dropChance = "0.02"></item>
+			<item itemid = "OFFER-1-04" dropChance = "0.02"></item>
+			<item itemid = "OFFER-1-05" dropChance = "0.02"></item>
+			<item itemid = "OFFER-2-01" dropChance = "0.02"></item>
+			<item itemid = "OFFER-2-02" dropChance = "0.02"></item>
+			<item itemid = "OFFER-2-03" dropChance = "0.02"></item>
+		</enemyDropList>
+		<enemyDropList enemyId = "ENEMY-02-02">
+			<item itemid = "OFFER-1-06" dropChance = "0.04"></item>
+			<item itemid = "OFFER-1-07" dropChance = "0.04"></item>
+			<item itemid = "OFFER-1-08" dropChance = "0.04"></item>
+			<item itemid = "OFFER-1-09" dropChance = "0.04"></item>
+			<item itemid = "OFFER-1-10" dropChance = "0.04"></item>
+		</enemyDropList>
+		<enemyDropList enemyId = "ENEMY-02-03">
+			<item itemid = "OFFER-4-01" dropChance = "0.1"></item>
+			<item itemid = "OFFER-4-02" dropChance = "0.1"></item>
+		</enemyDropList>
+		<enemyDropList enemyId = "ENEMY-02-04">
+			<item itemid = "OFFER-6-01" dropChance = "0.1"></item>
+			<item itemid = "OFFER-6-02" dropChance = "0.1"></item>
+		</enemyDropList>
+		<enemyDropList enemyId = "ENEMY-02-05">
+			<item itemid = "OFFER-5-01" dropChance = "0.1"></item>
+			<item itemid = "OFFER-5-02" dropChance = "0.1"></item>
+		</enemyDropList>
+		<enemyDropList enemyId = "ENEMY-03-01">
+			<item itemid = "OFFER-1-11" dropChance = "0.08"></item>
+			<item itemid = "OFFER-1-12" dropChance = "0.08"></item>
+			<item itemid = "OFFER-1-13" dropChance = "0.08"></item>
+			<item itemid = "OFFER-2-05" dropChance = "0.02"></item>
+			<item itemid = "OFFER-2-06" dropChance = "0.02"></item>
+		</enemyDropList>
+		<enemyDropList enemyId = "ENEMY-03-02">
+			<item itemid = "OFFER-3-08" dropChance = "0.08"></item>
+			<item itemid = "OFFER-3-09" dropChance = "0.08"></item>
+			<item itemid = "OFFER-3-10" dropChance = "0.08"></item>
+			<item itemid = "OFFER-2-06" dropChance = "0.06"></item>
+		</enemyDropList>
+		<enemyDropList enemyId = "ENEMY-03-03">
+			<item itemid = "OFFER-4-03" dropChance = "0.12"></item>
+			<item itemid = "OFFER-4-04" dropChance = "0.12"></item>
+			<item itemid = "OFFER-4-05" dropChance = "0.06"></item>
+		</enemyDropList>
+		<enemyDropList enemyId = "ENEMY-03-04">
+			<item itemid = "OFFER-6-03" dropChance = "0.12"></item>
+			<item itemid = "OFFER-6-04" dropChance = "0.12"></item>
+			<item itemid = "OFFER-6-05" dropChance = "0.06"></item>
+		</enemyDropList>
+		<enemyDropList enemyId = "ENEMY-03-05">
+			<item itemid = "OFFER-5-03" dropChance = "0.12"></item>
+			<item itemid = "OFFER-5-04" dropChance = "0.12"></item>
+			<item itemid = "OFFER-5-05" dropChance = "0.06"></item>
+		</enemyDropList>
+		<enemyDropList enemyId = "ENEMY-04-01">
+			<item itemid = "OFFER-3-04" dropChance = "0.03"></item>
+			<item itemid = "OFFER-3-05" dropChance = "0.03"></item>
+			<item itemid = "OFFER-3-06" dropChance = "0.03"></item>
+			<item itemid = "OFFER-3-07" dropChance = "0.03"></item>
+			<item itemid = "OFFER-2-02" dropChance = "0.03"></item>
+			<item itemid = "OFFER-2-05" dropChance = "0.03"></item>
+		</enemyDropList>
+		<enemyDropList enemyId = "ENEMY-04-02">
+			<item itemid = "OFFER-3-04" dropChance = "0.06"></item>
+			<item itemid = "OFFER-3-05" dropChance = "0.06"></item>
+			<item itemid = "OFFER-3-06" dropChance = "0.06"></item>
+			<item itemid = "OFFER-3-07" dropChance = "0.06"></item>
+			<item itemid = "OFFER-2-04" dropChance = "0.06"></item>
+		</enemyDropList>
+		<enemyDropList enemyId = "ENEMY-04-03">
+			<item itemid = "OFFER-4-03" dropChance = "0.1"></item>
+			<item itemid = "OFFER-4-04" dropChance = "0.1"></item>
+			<item itemid = "OFFER-4-05" dropChance = "0.02"></item>
+		</enemyDropList>
+		<enemyDropList enemyId = "ENEMY-04-04">
+			<item itemid = "OFFER-6-03" dropChance = "0.1"></item>
+			<item itemid = "OFFER-6-04" dropChance = "0.1"></item>
+			<item itemid = "OFFER-6-05" dropChance = "0.02"></item>
+		</enemyDropList>
+		<enemyDropList enemyId = "ENEMY-04-05">
+			<item itemid = "OFFER-5-03" dropChance = "0.1"></item>
+			<item itemid = "OFFER-5-04" dropChance = "0.1"></item>
+			<item itemid = "OFFER-5-05" dropChance = "0.02"></item>
+		</enemyDropList>
+	</enemyDrops>
+</dropTable>

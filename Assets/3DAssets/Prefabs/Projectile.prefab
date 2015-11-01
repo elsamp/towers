@@ -196,7 +196,7 @@ MonoBehaviour:
   hitRadiusArea: {fileID: 13500004}
   splashRadiusArea: {fileID: 13500002}
   bulletGO: {fileID: 100000}
-  splashRadius: .75
+  splashRadius: .100000001
   hitBaseFireDamage: 0
   hitBaseColdDamage: 0
   hitBaseEarthDamage: 0

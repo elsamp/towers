@@ -3,7 +3,14 @@ using System.Collections;
 
 public class LevelController : MonoBehaviour {
 
-	public Town town;
+    public int startingControl;
+    public int maxControl;
+	public ControlBalanceBar balanceBar;
+    public int startingFavour;
+    public FavourCounter favourGUI;
+
+    private int currentFavour;
+    private float currentControl;
 
     public GameObject earthStatusEffectPrefab;
     public GameObject coldStatusEffectPrefab;
@@ -24,19 +31,41 @@ public class LevelController : MonoBehaviour {
 		
 		FindObjectOfType<RoundController>().Init();
         FindObjectOfType<EnemyDropManager>().Init();
+
+        currentControl = startingControl;
+        currentFavour = startingFavour;
+        favourGUI.setTextValue(currentFavour);
+
+        balanceBar.Init();
     }
 
-	public void SpendReputation(float amount){
-		town.TakeHit(amount);
+	public bool SpendFavour(int amount){
+		
+        if(currentFavour >= amount)
+        {
+            currentFavour -= amount;
+            favourGUI.setTextValue(currentFavour);
+            return true;
+        }
+
+        return false;
 	}
 
-	public void EnemyReachedTown(Enemy enemy){
-		town.TakeHit(enemy.townDamageAmount);
+    public void AwardRoundFavour(int amount)
+    {
+        currentFavour += amount;
+        favourGUI.setTextValue(currentFavour);
+    }
+
+    public void EnemyReachedTown(Enemy enemy){
+        currentControl -= enemy.townDamageAmount;
+        balanceBar.UpdateControlBar(currentControl);
 	}
 
 	public void EnemyKilled(Enemy enemy){
-		town.Heal(enemy.killRewardAmount);
-	}
+        currentControl += enemy.killRewardAmount;
+        balanceBar.UpdateControlBar(currentControl);
+    }
 
 	public void EndLevel(bool isSuccessful){
 

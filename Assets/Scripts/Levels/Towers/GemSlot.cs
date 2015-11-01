@@ -22,7 +22,7 @@ public class GemSlot : MonoBehaviour {
 
 		if(gem != null){
 			this.GetComponent<Renderer>().material.color = gem.itemColour;
-			LevelController.Instance.SpendReputation(gem.itemCost);
+			LevelController.Instance.SpendFavour(gem.itemCost);
 		} else {
 			this.GetComponent<Renderer>().material.color = Color.white;
 		}

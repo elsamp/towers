@@ -4,8 +4,8 @@ using UnityEngine.UI;
 
 public class ControlBalanceBar : MonoBehaviour {
 
-    public int maxControl;
-    public float currentControl;
+    private int maxControl = 1;
+    private float currentControl = 1;
 
     public Image backgroundBar;
     public Image frontBar;
@@ -15,10 +15,8 @@ public class ControlBalanceBar : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
-        maxBarWidth = backgroundBar.rectTransform.sizeDelta.x;
-        barHeight = backgroundBar.rectTransform.sizeDelta.y;
 
-        UpdateControlBar(0);
+        
     }
 	
 	// Update is called once per frame
@@ -26,9 +24,22 @@ public class ControlBalanceBar : MonoBehaviour {
 	
 	}
 
-    public void UpdateControlBar(float controlChange)
+    public void Init()
     {
-        currentControl += controlChange;
+        maxControl = LevelController.Instance.maxControl;
+        currentControl = LevelController.Instance.startingControl;
+
+        Debug.Log("starting control:" + currentControl);
+
+        maxBarWidth = backgroundBar.rectTransform.sizeDelta.x;
+        barHeight = backgroundBar.rectTransform.sizeDelta.y;
+
+        UpdateControlBar(currentControl);
+    }
+
+    public void UpdateControlBar(float control)
+    {
+        currentControl = control;
 
         if (currentControl <= 0)
         {
@@ -40,8 +51,7 @@ public class ControlBalanceBar : MonoBehaviour {
             float multiplier = currentControl / maxControl;
             frontBar.rectTransform.sizeDelta = new Vector2(maxBarWidth * multiplier, barHeight);
         }
-
-        
+   
     }
 
 }

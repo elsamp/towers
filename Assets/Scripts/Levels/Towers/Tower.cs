@@ -8,7 +8,7 @@ public class Tower : MonoBehaviour {
 	public Projectile projectilePrefab;
 	public Turret turret;
 
-	public float cost;
+	public int cost;
 
 	public SphereCollider targetRadiusArea;
 	public GameObject projectileSpawnLocation;

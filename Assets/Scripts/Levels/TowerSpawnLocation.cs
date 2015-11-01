@@ -16,9 +16,13 @@ public class TowerSpawnLocation : MonoBehaviour {
 	}
 
 	void OnMouseDown(){
-		Instantiate(towerPrefab, this.gameObject.transform.position, Quaternion.identity);
-		LevelController.Instance.SpendReputation(towerPrefab.cost);
-		Destroy(this.gameObject);
+		
+		if (LevelController.Instance.SpendFavour(towerPrefab.cost))
+        {
+            Instantiate(towerPrefab, this.gameObject.transform.position, Quaternion.identity);
+            Destroy(this.gameObject);
+        }
+		
 	}
 }
 

@@ -41,10 +41,16 @@ public class Enemy : MonoBehaviour {
     private GameObject earthStatusEffect;
 
     private EnemyPath path;
+    private Round round;
 
     public EnemyPath Path
     {
         set { path = value; }
+    }
+
+    public Round Round
+    {
+        set { round = value; }
     }
 
 
@@ -355,6 +361,7 @@ public class Enemy : MonoBehaviour {
 	private void Die(){
 		LevelController.Instance.EnemyKilled(this);
         DropItem();
+        round.decreaseActiveEnemies();
 		Destroy(this.gameObject);
 	}
 

@@ -7,7 +7,7 @@ public class TowerModifier {
 
     public string itemName;
     public Color itemColour;
-    public float itemCost;
+    public int itemCost;
 
     public ModifierTypes modifierType;
 

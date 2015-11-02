@@ -13,7 +13,7 @@ public class EnemyDropModel {
 
 public class EnemyDropList
 {
-    [XmlArray("enemyDropList"), XmlArrayItem("item")]
+    [XmlArray("items"), XmlArrayItem("item")]
     public List<Item> ItemList { get; set; }
 
     [XmlAttribute("enemyId")]
@@ -23,7 +23,7 @@ public class EnemyDropList
 
 public class Item
 {
-    [XmlAttribute("itemId")]
+    [XmlAttribute("itemid")]
     public string ItemID { get; set; }
 
     [XmlAttribute("dropChance")]

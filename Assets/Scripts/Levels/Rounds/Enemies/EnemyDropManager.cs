@@ -19,6 +19,8 @@ public class EnemyDropManager : MonoBehaviour {
         if (instance == null)
         {
             instance = this;
+
+            Debug.Log("Drop Manager Init");
             enemyDrops = EnemyDropImporter.deserializeEnemyDrops();
         }
     }
@@ -37,12 +39,14 @@ public class EnemyDropManager : MonoBehaviour {
 
     public List<Item> GetEnemyDropsForRegion(string enemyId)
     {
-        List<Item> items = new List<Item>();
+        EnemyDropList list = new EnemyDropList();
 
-        EnemyDropList list;
         enemyDrops.TryGetValue(enemyId, out list);
 
-        return items;
+        //Debug.Log("enemyDrops " + enemyDrops.Count);
+        //Debug.Log("drops for enemy ID " + enemyId + ": " + list.ItemList.Count);
+
+        return list.ItemList;
     }
 
 }

@@ -20,6 +20,7 @@ public static class EnemyDropImporter {
         foreach (EnemyDropList list in enemyDropContainer.DropList)
         {
             dropList.Add(list.EnemyId, list);
+            //Debug.Log("Drop Importer -> Importing Enemy List " + list.EnemyId + list.ItemList.Count);
         }
 
         return dropList;

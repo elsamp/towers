@@ -173,7 +173,7 @@ public class Enemy : MonoBehaviour {
 
 		currentLife -= totalDamage;
 
-        Debug.Log("Enemy TARGET hit with damage: " + totalDamage);
+        //Debug.Log("Enemy TARGET hit with damage: " + totalDamage);
 
         CheckForDeath();
 
@@ -202,7 +202,7 @@ public class Enemy : MonoBehaviour {
             float normalizedDamage = coldDamage / 10;
             slowMultiplier = 1 - normalizedDamage;
 
-            Debug.Log("Slow Mulitiplier: " + slowMultiplier + "normalized damage: " + normalizedDamage);
+            //Debug.Log("Slow Mulitiplier: " + slowMultiplier + "normalized damage: " + normalizedDamage);
         }
     }
 
@@ -218,7 +218,7 @@ public class Enemy : MonoBehaviour {
             float normalizedDamage = earthDamage / 10;
             poisonMultiplier = 1 - normalizedDamage;
 
-            Debug.Log("Poison Mulitiplier: " + poisonMultiplier + "normalized damage: " + normalizedDamage);
+            //Debug.Log("Poison Mulitiplier: " + poisonMultiplier + "normalized damage: " + normalizedDamage);
         }
     }
 
@@ -226,7 +226,7 @@ public class Enemy : MonoBehaviour {
     {
         currentLife -= damage;
 
-        Debug.Log("Taking Burn Damage: " + damage);
+        //Debug.Log("Taking Burn Damage: " + damage);
 
         CheckForDeath();
 
@@ -368,7 +368,46 @@ public class Enemy : MonoBehaviour {
 
     private void DropItem()
     {
-        Debug.Log("Dropping Item");
-        List<Item> potentialDrops = EnemyDropManager.Instance.GetEnemyDropsForRegion(enemyId);
+        Debug.Log("Rolling for Drop Item");
+
+        Item dropItem = RollForDrop();
+
+        if (dropItem != null)
+        {
+            Debug.Log("Dropping Item: " + dropItem.ItemID);
+        }
+
+    }
+
+    private Item RollForDrop()
+    {
+
+        List <Item> potentialDrops = EnemyDropManager.Instance.GetEnemyDropsForRegion(enemyId);
+
+        Debug.Log("Potential Items: " + potentialDrops.Count);
+
+        Dictionary<float, Item> chanceList = new Dictionary<float, Item>();
+        float[] chanceTimes = new float[potentialDrops.Count];
+
+        float chanceMark = 0;
+
+        for (int i = 0; i < potentialDrops.Count; i++)
+        {
+            chanceMark += potentialDrops[i].DropChance;
+            chanceList.Add(chanceMark, potentialDrops[i]);
+            chanceTimes[i] = chanceMark;
+        }
+
+        float roll = Random.Range(0.0f, 1.0f);
+
+        for (int i = 0; i < chanceTimes.Length; i++)
+        {
+            if (roll < chanceTimes[i])
+            {
+                return chanceList[chanceTimes[i]];
+            }
+        }
+
+        return null;
     }
 }

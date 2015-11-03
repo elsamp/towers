@@ -5,7 +5,7 @@ public class RoundController : MonoBehaviour {
 
 	public Round[] rounds;
 
-	private int nextRoundIndex = 0;
+	public int nextRoundIndex = 0;
 	private float nextRoundStartTime;
 
 	private static RoundController instance;

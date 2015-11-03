@@ -92,7 +92,7 @@
 				clipDelayTimeModifier = "0"
 				reloadRateModifier = "0"
 				numberOfTargetsModifier = "0"
-				targetRadiusMultiplier = "1.75"
+				targetRadiusMultiplier = "1.4"
 				hitSplashMultiplier = "1"
 				hitPhysicalMultiplier = "1"
 				splashRadiusModifier = "0"

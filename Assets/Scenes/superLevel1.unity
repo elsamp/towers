@@ -12161,6 +12161,7 @@ GameObject:
   - 92: {fileID: 1692150120}
   - 124: {fileID: 1692150119}
   - 81: {fileID: 1692150118}
+  - 114: {fileID: 1692150123}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -12230,11 +12231,26 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1692150117}
   m_LocalRotation: {x: .35818103, y: 0, z: 0, w: .933652163}
-  m_LocalPosition: {x: 0, y: 15.7700005, z: -19.0100002}
+  m_LocalPosition: {x: 0, y: 13.6899996, z: -16.0100002}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 4
+--- !u!114 &1692150123
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1692150117}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5c4be262ce75ae458d0ec8f6570b10e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxXPos: 2.5
+  maxZPos: -13.1000004
+  minXPos: -2.5
+  minZPos: -19.25
 --- !u!1 &1693620141
 GameObject:
   m_ObjectHideFlags: 0
@@ -12371,6 +12387,7 @@ GameObject:
   - 33: {fileID: 1706241780}
   - 64: {fileID: 1706241779}
   - 23: {fileID: 1706241778}
+  - 114: {fileID: 1706241782}
   m_Layer: 0
   m_Name: GamePlane
   m_TagString: Untagged
@@ -12433,6 +12450,17 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 5
+--- !u!114 &1706241782
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1706241777}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0843abc0953e43143b3093b2239d4a29, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1708554618
 GameObject:
   m_ObjectHideFlags: 0

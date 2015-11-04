@@ -37,6 +37,8 @@ public class ListItem : MonoBehaviour {
 
     public void showIconSprite()
     {
+        Camera.main.GetComponent<CameraPanner>().setLockDrag(true);
+
         Debug.Log("Mouse Down " + itemName);
         iconSprite = Instantiate(iconSprite);
         isDragging = true;
@@ -44,6 +46,8 @@ public class ListItem : MonoBehaviour {
 
     public void hideIconSprite()
     {
+        Camera.main.GetComponent<CameraPanner>().setLockDrag(false);
+
         Debug.Log("Mouse Up " + itemName);
         isDragging = false;
 

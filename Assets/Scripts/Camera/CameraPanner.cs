@@ -4,6 +4,7 @@ using System.Collections;
 public class CameraPanner : MonoBehaviour {
 
     private bool isDragging;
+    private bool isDragLocked;
 
     public float maxXPos;
     public float maxZPos;
@@ -57,16 +58,29 @@ public class CameraPanner : MonoBehaviour {
 
     public void StartDragging()
     {
-        isDragging = true;
+        if (!isDragLocked)
+        {
+            isDragging = true;
 
-        mouseStartPos = Input.mousePosition;
-        moveVector = this.transform.position;
+            mouseStartPos = Input.mousePosition;
+            moveVector = this.transform.position;
+        }
 
     }
 
     public void EndDragging()
     {
         isDragging = false;
+    }
+
+    public void setLockDrag(bool isLocked)
+    {
+        isDragLocked = isLocked;
+
+        if (isLocked && isDragging)
+        {
+            EndDragging();
+        }
     }
 
 }

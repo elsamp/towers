@@ -459,7 +459,7 @@ MonoBehaviour:
   squadProximity: 1.5
   favourReward: 30
   squadCount: 10
-  startDelayTime: 50
+  startDelayTime: 30
   roundPath: {fileID: 1671367679}
   isActive: 0
 --- !u!1 &90913105
@@ -9106,7 +9106,7 @@ MonoBehaviour:
   squadProximity: .699999988
   favourReward: 0
   squadCount: 40
-  startDelayTime: 25
+  startDelayTime: 15
   roundPath: {fileID: 1671367679}
   isActive: 0
 --- !u!1 &1524722139

@@ -1,4 +1,11 @@
-﻿Shader "Custom/TerrainSplat" {
+﻿#warning Upgrade NOTE: unity_Scale shader variable was removed; replaced 'unity_Scale' with 'float4(1,1,1,1)'
+// Upgrade NOTE: commented out 'float3 _WorldSpaceCameraPos', a built-in variable
+// Upgrade NOTE: commented out 'float4 unity_LightmapST', a built-in variable
+// Upgrade NOTE: commented out 'float4x4 _Object2World', a built-in variable
+// Upgrade NOTE: commented out 'float4x4 _World2Object', a built-in variable
+// Upgrade NOTE: commented out 'sampler2D unity_Lightmap', a built-in variable
+
+Shader "Custom/TerrainSplat" {
 	Properties {
 		_Map ("Reflection", 2D) = "white" {}
 		_RedSplat ("Red Splat", 2D) = "white" {}
@@ -23,26 +30,36 @@
 		uniform float4 _RedSplat_ST;
 		uniform float4 _GreenSplat_ST;
 		uniform float4 _BlueSplat_ST;
-		
+
+		uniform float4 _LightColor0;
 		
 		struct vertexInput {
 			float4 vertex : POSITION;
 			float4 texcoord : TEXCOORD0;
+			float4 texcoord1 : TEXCOORD1;
+			float3 normal : NORMAL;
 		};
-		
-		
+
 		struct vertexOutput {
 			float4 pos : SV_POSITION;
-			float4 tex : TEXCOORD0;
+			fixed4 col : COLOR;
+			float4 tex : TEXCOORD1;
+			float2 uv : TEXCOORD2;
 		};
 		
 		
 		vertexOutput vert(vertexInput input){
-		
+
 			vertexOutput output;
+			
+			float3 normalDirection = normalize(float3(mul(float4(input.normal, 0.0), _World2Object).xyz));
+			float3 lightDirection = normalize(float3(_WorldSpaceLightPos0.xyz));
+			float3 defuseReflection = float3(_LightColor0.xyz)* max(0.0, dot(normalDirection, lightDirection));
+			output.col = float4(defuseReflection, 1.0) + float4(UNITY_LIGHTMODEL_AMBIENT);
 
 			output.pos = mul(UNITY_MATRIX_MVP, input.vertex);
 			output.tex = input.texcoord;
+			output.uv = ((input.texcoord1.xy * unity_LightmapST.xy) + unity_LightmapST.zw);
 			
 			return output;
 		
@@ -58,7 +75,7 @@
 			 						(tex2D(_GreenSplat, input.tex.xy * _GreenSplat_ST) * blendMap.g) +
 			 						(tex2D(_BlueSplat, input.tex.xy * _BlueSplat_ST) * blendMap.b);
 			
-			return colouredOutput;
+			return colouredOutput * input.col;
 		}
 		
 		

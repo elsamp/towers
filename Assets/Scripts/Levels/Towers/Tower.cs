@@ -61,7 +61,7 @@ public class Tower : MonoBehaviour {
 				//Debug.Log("Distance " + distance);
 				//Debug.Log("Radius " + targetRadius.radius);
 
-				if(distance > (targetRadiusArea.radius * targetRadiusMultiplier) + 0.5 ){
+				if(distance > (targetRadiusArea.radius * (targetRadiusMultiplier +1)) + 0.5 ){
 					RemoveTarget(targetableEnemies[index]);
 				}
 			}
@@ -132,9 +132,9 @@ public class Tower : MonoBehaviour {
         clipDelayTimeModifier += appliedOffering.clipDelayTimeModifier;
         reloadTimeModifier += appliedOffering.reloadRateModifier;
         numberOfTargetsModifier += appliedOffering.numberOfTargetsModifier;
-        targetRadiusMultiplier *= appliedOffering.targetRadiusMultiplier;
+        targetRadiusMultiplier += appliedOffering.targetRadiusMultiplier;
 
-        targetRadiusArea.radius = targetRadiusBase * targetRadiusMultiplier;
+        targetRadiusArea.radius = targetRadiusBase * (targetRadiusMultiplier +1);
 
         offeringEndTime = Time.time + appliedOffering.durration;
     }
@@ -147,9 +147,9 @@ public class Tower : MonoBehaviour {
         clipDelayTimeModifier -= appliedOffering.clipDelayTimeModifier;
         reloadTimeModifier -= appliedOffering.reloadRateModifier;
         numberOfTargetsModifier -= appliedOffering.numberOfTargetsModifier;
-        targetRadiusMultiplier /= appliedOffering.targetRadiusMultiplier;
+        targetRadiusMultiplier -= appliedOffering.targetRadiusMultiplier;
 
-        targetRadiusArea.radius = targetRadiusBase * targetRadiusMultiplier;
+        targetRadiusArea.radius = targetRadiusBase * (targetRadiusMultiplier +1);
 
         appliedOffering = null;
     }
@@ -193,7 +193,7 @@ public class Tower : MonoBehaviour {
 			}
 		}
 
-		targetRadiusArea.radius = targetRadiusBase * targetRadiusMultiplier;
+        targetRadiusArea.radius = targetRadiusBase * (targetRadiusMultiplier +1);
 	}
 
 	public void ApplyProjectileModifiers(Projectile projectile){

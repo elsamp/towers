@@ -176,7 +176,7 @@ public class Projectile : MonoBehaviour {
 
 	private float PhysicalDamage(){
 
-        return hitBasePhysicalDamage * hitPhysicalMultiplier * hitGlobalMultiplier;
+        return hitBasePhysicalDamage * (hitPhysicalMultiplier +1);
     }
 
 	private void ApplyTargetDamage(){
@@ -188,10 +188,10 @@ public class Projectile : MonoBehaviour {
 
     private void ApplySplashDamage(){
 
-        float physicalSlpash = ConvertedPhysicalDamage() * splashDamageMitigator * hitSplashMultiplier;
-        float coldSplash = ColdDamage() * splashDamageMitigator * hitSplashMultiplier;
-        float fireSplash = FireDamage() * splashDamageMitigator * hitSplashMultiplier;
-        float earthSplash = EarthDamage() * splashDamageMitigator * hitSplashMultiplier;
+        float physicalSlpash = ConvertedPhysicalDamage() * splashDamageMitigator * (hitSplashMultiplier + 1);
+        float coldSplash = ColdDamage() * splashDamageMitigator * (hitSplashMultiplier + 1);
+        float fireSplash = FireDamage() * splashDamageMitigator * (hitSplashMultiplier + 1);
+        float earthSplash = EarthDamage() * splashDamageMitigator * (hitSplashMultiplier + 1);
 
         foreach (Enemy enemy in splashTargetEnemies){
 			if(enemy != null){

@@ -84,11 +84,11 @@ public class Projectile : MonoBehaviour {
         {
             if (gem != null)
             {
-                hitSplashMultiplier *= gem.hitSplashMultiplier;
-                hitPhysicalMultiplier *= gem.hitPhysicalMultiplier;
+                hitSplashMultiplier += gem.hitSplashMultiplier;
+                hitPhysicalMultiplier += gem.hitPhysicalMultiplier;
                 splashRadiusModifier += gem.splashRadiusModifier;
             }
-        } 
+        }
 
         //Debug.Log("Elemental conversion rates| Cold: " + coldConversionRate + " Fire: " + fireConversionRate + " Earth: " + earthConversionRate);
 
@@ -96,8 +96,8 @@ public class Projectile : MonoBehaviour {
 
     public void UpdateMultipliersForOffering(Offering offering)
     {
-        hitSplashMultiplier *= offering.hitSplashMultiplier;
-        hitPhysicalMultiplier *= offering.hitPhysicalMultiplier;
+        hitSplashMultiplier += offering.hitSplashMultiplier;
+        hitPhysicalMultiplier += offering.hitPhysicalMultiplier;
         splashRadiusModifier += offering.splashRadiusModifier;
         
         fireConversionRate += offering.fireConversionRate;

@@ -104,6 +104,7 @@ public class Projectile : MonoBehaviour {
 
         if(targetEnemy != null)
         {
+            targetHit = true;
             LandHit();
         }
     }
@@ -192,7 +193,7 @@ public class Projectile : MonoBehaviour {
 
 	private float PhysicalDamage(){
 
-        return hitBasePhysicalDamage * (hitPhysicalMultiplier +1);
+        return hitBasePhysicalDamage * (hitPhysicalMultiplier);
     }
 
 	private void ApplyTargetDamage(){

@@ -633,7 +633,7 @@ MonoBehaviour:
   cost: 20
   targetRadiusArea: {fileID: 13500006}
   projectileSpawnLocation: {fileID: 100012}
-  targetRadiusBase: 1.25
+  targetRadiusBase: .75
   clipMaxSizeBase: 1
   clipDelayTimeBase: .200000003
   reloadTimeBase: 1

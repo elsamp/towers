@@ -94,6 +94,8 @@ public class Projectile : MonoBehaviour {
             }
         }
 
+        float adjustedScale = bulletGO.transform.localScale.x * (hitPhysicalMultiplier /1.5f);
+        bulletGO.transform.localScale = new Vector3(adjustedScale, adjustedScale, adjustedScale);
         //Debug.Log("Elemental conversion rates| Cold: " + coldConversionRate + " Fire: " + fireConversionRate + " Earth: " + earthConversionRate);
 
     }

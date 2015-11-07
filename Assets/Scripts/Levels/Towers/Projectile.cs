@@ -18,6 +18,7 @@ public class Projectile : MonoBehaviour {
 	public float hitBasePhysicalDamage;
     public float statusEffectDuration;
     public float speed;
+    private float speedModifier;
 
 	private Enemy targetEnemy;
 	public List<Enemy> splashTargetEnemies;
@@ -39,25 +40,27 @@ public class Projectile : MonoBehaviour {
 	private float splashDamageMitigator = 0.2f;
 
 	private Vector3 direction;
-	private Vector3 splashScale;
+    private Vector3 startPos;
+    private Vector3 splashScale;
 	private bool targetHit = false;
 
 	// Use this for initialization
 	void Start () {
 	
 		splashScale = new Vector3(0.2f,0.2f,0.2f);
+        startPos = transform.position;
 	}
 	
 	// Update is called once per frame
 	void LateUpdate () {
 
-		if(targetEnemy != null && !targetHit){
+		if(direction != null && !targetHit){
 
-			direction = targetEnemy.transform.position - transform.position;
-			transform.Translate(direction.normalized * speed * Time.deltaTime, Space.World);
+			//direction = targetPosition.position - transform.position;
+			transform.Translate(direction.normalized * (speed + speedModifier) * Time.deltaTime, Space.World);
 
 			if(HaveArrived()){
-				LandHit();
+                Destroy(this.gameObject);
 			}
 
 		} else if (targetHit){
@@ -84,6 +87,7 @@ public class Projectile : MonoBehaviour {
         {
             if (gem != null)
             {
+                speedModifier += gem.projectileSpeedModifier;
                 hitSplashMultiplier += gem.hitSplashMultiplier;
                 hitPhysicalMultiplier += gem.hitPhysicalMultiplier;
                 splashRadiusModifier += gem.splashRadiusModifier;
@@ -92,6 +96,16 @@ public class Projectile : MonoBehaviour {
 
         //Debug.Log("Elemental conversion rates| Cold: " + coldConversionRate + " Fire: " + fireConversionRate + " Earth: " + earthConversionRate);
 
+    }
+
+    void OnTriggerEnter(Collider other)
+    {
+        targetEnemy = other.gameObject.GetComponent<Enemy>();
+
+        if(targetEnemy != null)
+        {
+            LandHit();
+        }
     }
 
     public void UpdateMultipliersForOffering(Offering offering)
@@ -111,9 +125,9 @@ public class Projectile : MonoBehaviour {
 
 	private bool HaveArrived(){
 
-		if(Vector3.Distance(transform.position, targetEnemy.transform.position) <= 0.03f)
-		{      
-			return true;
+		if(Vector3.Distance(transform.position, startPos) >= 15)
+		{
+            return true; 
 		}
 		
 		return false;
@@ -130,8 +144,10 @@ public class Projectile : MonoBehaviour {
 	public void SetTarget(Enemy enemy){
 
 		//Debug.Log("Set Target");
-		targetEnemy = enemy;
-	}
+		//targetEnemy = enemy;
+        direction = enemy.transform.position - transform.position;
+
+    }
 
 	public void AddSplashTarget(Enemy enemy){
 

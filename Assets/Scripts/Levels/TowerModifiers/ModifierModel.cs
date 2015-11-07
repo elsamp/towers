@@ -34,11 +34,14 @@ public class Modifier
 
 public class ModifierProperties
 {
+    [XmlAttribute("projectileSpeedModifier")]
+    public float ProjectileSpeedModifier { get; set; }
+
     [XmlAttribute("clipSizeModifier")]
     public float ClipSizeModifier { get; set; }
 
-    [XmlAttribute("clipDelayTimeModifie")]
-    public float ClipDelayTimeModifie { get; set; }
+    [XmlAttribute("clipDelayTimeModifier")]
+    public float ClipDelayTimeModifier { get; set; }
 
     [XmlAttribute("reloadRateModifier")]
     public float ReloadRateModifier { get; set; }

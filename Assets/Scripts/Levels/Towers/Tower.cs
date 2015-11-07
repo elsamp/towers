@@ -61,7 +61,7 @@ public class Tower : MonoBehaviour {
 				//Debug.Log("Distance " + distance);
 				//Debug.Log("Radius " + targetRadius.radius);
 
-				if(distance > (targetRadiusArea.radius * (targetRadiusMultiplier +1)) + 0.5 ){
+				if(distance > (targetRadiusBase * (targetRadiusMultiplier +1)) + 0.5 ){
 					RemoveTarget(targetableEnemies[index]);
 				}
 			}
@@ -220,7 +220,11 @@ public class Tower : MonoBehaviour {
 
 		for(int targetIndex = 0 ; (targetIndex < targetableEnemies.Count) && (targetIndex < (numberOfTargetsBase + numberOfTargetsModifier)); targetIndex++ ){
 
-			Projectile projectile = Instantiate(projectilePrefab, projectileSpawnLocation.transform.position, Quaternion.identity) as Projectile;
+            float distance = Vector3.Distance(transform.position, targetableEnemies[targetIndex].gameObject.transform.position);
+
+            Debug.Log("Distance: " + distance + "Radius: " + (targetRadiusBase * (targetRadiusMultiplier +1)));
+
+            Projectile projectile = Instantiate(projectilePrefab, projectileSpawnLocation.transform.position, Quaternion.identity) as Projectile;
 			projectile.SetTarget(targetableEnemies[targetIndex]);
 			ApplyProjectileModifiers(projectile);
 		}

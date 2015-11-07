@@ -19,6 +19,7 @@ public class TowerModifier {
     public float targetRadiusMultiplier = 1;
 
     // Projectile Modifiers
+    public float projectileSpeedModifier;
     public float hitSplashMultiplier = 1;
     public float hitPhysicalMultiplier = 1;
     public float splashRadiusModifier = 0;
@@ -35,11 +36,12 @@ public class TowerModifier {
         itemCost = model.ItemCost;
 
         clipSizeModifier = model.Properties.ClipSizeModifier;
-        clipDelayTimeModifier = model.Properties.ClipDelayTimeModifie;
+        clipDelayTimeModifier = model.Properties.ClipDelayTimeModifier;
         reloadRateModifier = model.Properties.ReloadRateModifier;
         numberOfTargetsModifier = model.Properties.NumberOfTargetsModifier;
         targetRadiusMultiplier = model.Properties.TargetRadiusMultiplier;
 
+        projectileSpeedModifier = model.Properties.ProjectileSpeedModifier;
         hitSplashMultiplier = model.Properties.HitSplashMultiplier;
         hitPhysicalMultiplier = model.Properties.HitPhysicalMultiplier;
         splashRadiusModifier = model.Properties.SplashRadiusModifier;

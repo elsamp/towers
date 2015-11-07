@@ -108,6 +108,7 @@
 		
 		<modifier itemID = "OFFER-1-06" itemName = "Flower petal" itemCost = "0" spriteName = "" >
 			<modifierProperties
+				projectileSpeedModifier = "1"
 				clipSizeModifier = "0"
 				clipDelayTimeModifier = "0"
 				reloadRateModifier = "0"
@@ -402,9 +403,10 @@
 		
 		<modifier itemID = "OFFER-3-01" itemName = "Shimmering dust" itemCost = "0" spriteName = "" >
 			<modifierProperties
+				projectileSpeedModifier = "1"
 				clipSizeModifier = "0"
 				clipDelayTimeModifier = "0"
-				reloadRateModifier = "0.15"
+				reloadRateModifier = "0.1"
 				numberOfTargetsModifier = "0"
 				targetRadiusMultiplier = "0"
 				hitSplashMultiplier = "0"

@@ -219,7 +219,7 @@ MonoBehaviour:
   hitBaseEarthDamage: 0
   hitBasePhysicalDamage: 5
   statusEffectDuration: 2
-  speed: 4
+  speed: 6
   splashTargetEnemies: []
 --- !u!114 &11400002
 MonoBehaviour:
@@ -294,7 +294,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: speed
-      value: 4
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: m_UseGravity

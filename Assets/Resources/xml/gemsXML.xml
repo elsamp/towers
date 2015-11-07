@@ -3,6 +3,7 @@
 	
 		<modifier itemID = "GEM-01" itemName = "Split Shot" itemCost = "5" spriteName = "" >
 			<modifierProperties
+				projectileSpeedModifier = "0";
 				clipSizeModifier = "0"
 				clipDelayTimeModifier = "0"
 				reloadRateModifier = "0.05"
@@ -24,6 +25,7 @@
 		
 		<modifier itemID = "GEM-02" itemName = "Rapid Fire" itemCost = "5" spriteName = "" >
 			<modifierProperties
+				projectileSpeedModifier = "0.5";
 				clipSizeModifier = "1"
 				clipDelayTimeModifier = "-0.1"
 				reloadRateModifier = "0.05"
@@ -45,6 +47,7 @@
     
 		<modifier itemID = "GEM-03" itemName = "Splash Damage" itemCost = "5" spriteName = "" >
 			<modifierProperties
+				projectileSpeedModifier = "0";
 				clipSizeModifier = "0"
 				clipDelayTimeModifier = "0"
 				reloadRateModifier = "0"
@@ -67,6 +70,7 @@
     
 		<modifier itemID = "GEM-04" itemName = "Faster Reload" itemCost = "5" spriteName = "" >
 			<modifierProperties
+				projectileSpeedModifier = "1";
 				clipSizeModifier = "0"
 				clipDelayTimeModifier = "0"
 				reloadRateModifier = "-0.2"
@@ -88,6 +92,7 @@
     
 		<modifier itemID = "GEM-05" itemName = "Increased Range" itemCost = "5" spriteName = "" >
 			<modifierProperties
+				projectileSpeedModifier = "0.5";
 				clipSizeModifier = "0"
 				clipDelayTimeModifier = "0"
 				reloadRateModifier = "0"
@@ -109,6 +114,7 @@
     
 		<modifier itemID = "GEM-06" itemName = "Added Damage" itemCost = "5" spriteName = "" >
 			<modifierProperties
+				projectileSpeedModifier = "-0.5";
 				clipSizeModifier = "0"
 				clipDelayTimeModifier = "0"
 				reloadRateModifier = "0.1"

@@ -219,7 +219,7 @@ MonoBehaviour:
   hitBaseEarthDamage: 0
   hitBasePhysicalDamage: 5
   statusEffectDuration: 2
-  speed: 4
+  speed: 6
   splashTargetEnemies: []
 --- !u!114 &11400002
 MonoBehaviour:

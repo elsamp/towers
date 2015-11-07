@@ -102,9 +102,8 @@ public class Projectile : MonoBehaviour {
     {
         targetEnemy = other.gameObject.GetComponent<Enemy>();
 
-        if(targetEnemy != null)
+        if(targetHit == false && targetEnemy != null)
         {
-            targetHit = true;
             LandHit();
         }
     }
@@ -197,26 +196,31 @@ public class Projectile : MonoBehaviour {
     }
 
 	private void ApplyTargetDamage(){
-		targetEnemy.TakeDamage(ConvertedPhysicalDamage(), ColdDamage(), FireDamage(),EarthDamage(), globalStatusChance,statusEffectDuration);
 
-        Debug.Log("Enemy TARGET hit with damage| Physical: " + ConvertedPhysicalDamage() + 
-            " Cold: " + ColdDamage() + " Fire: " + FireDamage() + " Earth: " + EarthDamage());
+        if(targetEnemy != null)
+        {
+            targetEnemy.TakeDamage(ConvertedPhysicalDamage(), ColdDamage(), FireDamage(), EarthDamage(), globalStatusChance, statusEffectDuration);
+
+            Debug.Log("Enemy TARGET hit with damage| Physical: " + ConvertedPhysicalDamage() +
+                " Cold: " + ColdDamage() + " Fire: " + FireDamage() + " Earth: " + EarthDamage());
+        }
+		
 	}
 
     private void ApplySplashDamage(){
 
-        float physicalSlpash = ConvertedPhysicalDamage() * splashDamageMitigator * (hitSplashMultiplier + 1);
-        float coldSplash = ColdDamage() * splashDamageMitigator * (hitSplashMultiplier + 1);
-        float fireSplash = FireDamage() * splashDamageMitigator * (hitSplashMultiplier + 1);
-        float earthSplash = EarthDamage() * splashDamageMitigator * (hitSplashMultiplier + 1);
+        float physicalSlpash = ConvertedPhysicalDamage() * splashDamageMitigator * (hitSplashMultiplier);
+        float coldSplash = ColdDamage() * splashDamageMitigator * (hitSplashMultiplier);
+        float fireSplash = FireDamage() * splashDamageMitigator * (hitSplashMultiplier);
+        float earthSplash = EarthDamage() * splashDamageMitigator * (hitSplashMultiplier);
 
         foreach (Enemy enemy in splashTargetEnemies){
 			if(enemy != null){
 
 				enemy.TakeDamage(physicalSlpash,coldSplash,fireSplash,earthSplash, globalStatusChance,statusEffectDuration);
 
-                /*Debug.Log("Enemy SPLASH hit with damage| Physical: " + physicalSlpash +
-            " Cold: " + coldSplash + " Fire: " + fireSplash + " Earth: " + earthSplash);*/
+               Debug.Log("Enemy SPLASH hit with damage| Physical: " + physicalSlpash +
+            " Cold: " + coldSplash + " Fire: " + fireSplash + " Earth: " + earthSplash);
             }
 		}
 	}

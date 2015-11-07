@@ -97,7 +97,7 @@
 				clipDelayTimeModifier = "0"
 				reloadRateModifier = "0"
 				numberOfTargetsModifier = "0"
-				targetRadiusMultiplier = "0.3"
+				targetRadiusMultiplier = "0.5"
 				hitSplashMultiplier = "0"
 				hitPhysicalMultiplier = "0"
 				splashRadiusModifier = "0"
@@ -114,14 +114,14 @@
     
 		<modifier itemID = "GEM-06" itemName = "Added Damage" itemCost = "5" spriteName = "" >
 			<modifierProperties
-				projectileSpeedModifier = "-0.5"
+				projectileSpeedModifier = "-1"
 				clipSizeModifier = "0"
 				clipDelayTimeModifier = "0"
 				reloadRateModifier = "0.1"
 				numberOfTargetsModifier = "0"
 				targetRadiusMultiplier = "-0.15"
 				hitSplashMultiplier = "0"
-				hitPhysicalMultiplier = "0.4"
+				hitPhysicalMultiplier = "0.75"
 				splashRadiusModifier = "0"
 				statusEffectChanceMultiplier = "0"
 				statusEffectDurationModifier = "0"

@@ -49,4 +49,16 @@ public static class ModifierImporter {
         return offerings.ToArray();
     }
 
+    public static Dictionary<string, Offering> getOfferingDictionary()
+    {
+        Dictionary<string, Offering> offerings = new Dictionary<string, Offering>();
+
+        foreach (Modifier mod in deserializeModifiers("xml/offeringsXML"))
+        {
+            offerings.Add(mod.ItemID, new Offering(mod));
+        }
+
+        return offerings;
+    }
+
 }

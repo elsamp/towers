@@ -375,8 +375,19 @@ public class Enemy : MonoBehaviour {
         if (dropItem != null)
         {
             Debug.Log("Dropping Item: " + dropItem.ItemID);
+            SpawnDropItem(EnemyDropManager.Instance.GetOfferingForId(dropItem.ItemID));
         }
 
+    }
+
+    private void SpawnDropItem(Offering dropItem)
+    {
+        Vector3 dropPosition = this.transform.position;
+        dropPosition.y = 0.25f;
+        Vector3 rotation = new Vector3(45,0,0);
+
+        DropItem item = Instantiate(LevelController.Instance.dropItemPrefab, dropPosition, Quaternion.Euler(rotation)) as DropItem;
+        item.SetDropItem(dropItem);
     }
 
     private Item RollForDrop()

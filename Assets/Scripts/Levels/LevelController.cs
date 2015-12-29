@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 public class LevelController : MonoBehaviour {
 
@@ -15,6 +16,8 @@ public class LevelController : MonoBehaviour {
     public GameObject earthStatusEffectPrefab;
     public GameObject coldStatusEffectPrefab;
     public GameObject fireStatusEffectPrefab;
+
+    public DropItem dropItemPrefab;
 
     private static LevelController instance;
 	

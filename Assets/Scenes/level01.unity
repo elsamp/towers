@@ -2343,10 +2343,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyPrefab: {fileID: 11400000, guid: 67782073ed94ebd48b6c8bf15869b432, type: 2}
-  squadProximity: .349999994
-  favourReward: 20
-  squadCount: 20
-  startDelayTime: 15
+  squadProximity: .75
+  favourReward: 30
+  squadCount: 15
+  startDelayTime: 10
   roundPath: {fileID: 900511874}
   isActive: 0
 --- !u!1 &1106079054
@@ -2389,9 +2389,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyPrefab: {fileID: 11400000, guid: 67782073ed94ebd48b6c8bf15869b432, type: 2}
-  squadProximity: 1
-  favourReward: 50
-  squadCount: 4
+  squadProximity: 1.5
+  favourReward: 40
+  squadCount: 5
   startDelayTime: 0
   roundPath: {fileID: 1671367679}
   isActive: 0
@@ -3611,7 +3611,7 @@ MonoBehaviour:
   startingControl: 50
   maxControl: 100
   balanceBar: {fileID: 1376744451}
-  startingFavour: 200
+  startingFavour: 50
   favourGUI: {fileID: 1988776471}
   earthStatusEffectPrefab: {fileID: 151306, guid: 6adbc23c10c076e4cb712844c26e1622,
     type: 2}
@@ -3619,6 +3619,7 @@ MonoBehaviour:
     type: 2}
   fireStatusEffectPrefab: {fileID: 116264, guid: 2802eefad381d7e44b018d6ceb99d39d,
     type: 2}
+  dropItemPrefab: {fileID: 0}
 --- !u!1 &1977799305
 GameObject:
   m_ObjectHideFlags: 0
